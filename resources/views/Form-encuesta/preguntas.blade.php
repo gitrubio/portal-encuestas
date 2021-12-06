@@ -20,7 +20,7 @@
         <div class ="textoInicio">
         <p class="text-justify1 justify-content-end">
           <strong>PERFECT BODY MEDICAL CENTER</strong></br>Estam
-          </br><strong>Por favor, Realizar la siguiente encuesta:</strong></p>
+          </br><strong>Por favor, Realizar la siguiente encuesta: agahhdjgshsd</strong></p>
         </div>
         <div class="row1">
           <button type="button" class="btn1 btn-primary1" data-toggle="modal" data-target="#exampleModalLong">
