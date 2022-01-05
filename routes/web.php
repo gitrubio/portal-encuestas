@@ -3,6 +3,7 @@
 use Illuminate\Contracts\Cache\Store;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\respuestasController;
+use App\Http\Controllers\EncuestaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +24,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Rout7e::get('/', function () {
+/*Route::get('/', function () {
     return view('form-encuesta.encuesta');
 });
 Route::get('/', function () {
@@ -31,25 +32,26 @@ Route::get('/', function () {
 });
 Route::get('', function () {
     return view('form-encuesta.principal');    
-});*
+});*/
+
+
 Route::get('/', function () {
     return view('form-encuesta.preguntas');
 });
 
+Route::get('/',[EncuestaController::class,'index'])->name('preguntas.index');
             /*Ruta utilizada para Recibir los datos del Formulario de encuesta 
             diligenciado por los usuarios*/
 Route::post('respuestas', [respuestasController::class, 'store'])
             ->name('respuestas.store');
-            
-//Route::get('/', function () {
-Route::get('/', function () {
-    return view('form-encuesta.queja');
-    
-});
+   
+           /* Route::get('/', function () {
+                return view('form-encuesta.queja');*/
+/*Route::get('/', function () {
 
-//    return view('encuesta.inicioqueja');
-    
-//});
+    return view('encuesta.inicioqueja');
+});*/
+
 Auth::routes();
 
 
