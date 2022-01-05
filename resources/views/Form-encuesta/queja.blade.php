@@ -12,13 +12,13 @@
     <img class="mx-auto my-4 rounded d-block" src="../resources/imagenes/Perfect-Body-Santa-Marta.png" alt="">
     
     <div class="container text-center bg-success">
-    <h2 class="text-center font-weight-bold">PRCESO DE RECOLECCIÓN DE QUEJA</h2>
-       <h4 class="">Su opinión es importante para nosotros; para realizar su queja tenga en cuenta los siguientes aspectos:</h4>
-        <ol class="text-justify list-group list-group-numbered">
-            <li class="list-group-item">Dirijase en tono respetuoso</li>
-            <li class="list-group-item">Sea lo mas preciso en la información, incluya fecha, hora, funcionarios involucrados</li>
-            <li class="list-group-item">Aporte pruebas (si las tiene), cono fotos, documentos, o cualquier tipo de evidencia que usted considere que pueda respaldar lo descrito</li>
-        </ol>
+        <h2 class="text-center font-weight-bold pt-8">PRCESO DE RECOLECCIÓN DE QUEJA</h2>
+        <h5 class="">Su opinión es importante para nosotros; para realizar su queja tenga en cuenta los siguientes aspectos:</h4>
+        <ol class="text-justify list-group ">
+            <li>Dirijase en tono respetuoso</li>
+            <li>Sea lo mas preciso en la información, incluya fecha, hora, funcionarios involucrados</li>
+            <li>Aporte pruebas (si las tiene), cono fotos, documentos, o cualquier tipo de evidencia que usted considere que pueda respaldar lo descrito</li>
+        </ul>
     <form action="" method="post">
        
         <div class="form-floating">
