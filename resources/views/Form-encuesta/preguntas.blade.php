@@ -6,6 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href=" {{ asset('css/app.css') }}" rel="stylesheet">
 
+
+
+
+
+
+
+
+
+    
+
     <script type="text/javascript" src=" {{asset('js/app.js') }}" ></script>
     <title>Encuesta Perfect Body Medical Center</title>
 </head>
@@ -19,10 +29,14 @@
         <img class="mx-auto my-4 rounded d-block" src="../resources/imagenes/Perfect-Body-Santa-Marta.png" alt="">
         <div class ="textoInicio">
         <p class="text-justify1 justify-content-end">
-          <strong>PERFECT BODY MEDICAL CENTER</strong></br>Estam
-          </br><strong>Por favor, Realizar la siguiente encuesta: agahhdjgshsd</strong></p>
+          <strong>PERFECT BODY MEDICAL CENTER</strong></br> prueba
+          </br><strong>Por favor, Realizar la siguiente encuesta: </strong></p>
         </div>
         <div class="row1">
+
+
+
+          
           <button type="button" class="btn1 btn-primary1" data-toggle="modal" data-target="#exampleModalLong">
               Iniciar encuesta 
            </button> 
@@ -54,36 +68,26 @@
 {{-- Inicia el formulario de preguntas el cual el usuario va a llenar --}}
         
         <form class="px-4" action="{{route('respuestas.store')}}" method="POST">
-          @csrf
           
-          <fieldset>           
-          <p class="text-center"><strong>¿Comó califica nuestras instalaciones?</strong></p>
+          @foreach ($preguntas as $pregunta)
+            <fieldset>           
+          <p class="text-center"><strong>{{$pregunta->pregunta}}</strong></p>
            <div class="">
-              <div class="mb-2 form-check">
-                <input class="form-check-input" type="radio" name="pregunta1" id="radio2Example1" />
-                <label class="form-check-label" for="radio2Example1">Muy Bueno</label>
-              </div>
-              <div class="mb-2 form-check">
-                <input class="form-check-input" type="radio" name="pregunta1" id="radio2Example2" />
-                <label class="form-check-label" for="radio2Example2">Bueno</label>
-              </div>
-              <div class="mb-2 form-check">
-                <input class="form-check-input" type="radio" name="pregunta1" id="radio2Example3" />
-                <label class="form-check-label" for="radio2Example3">Regular</label>
-              </div>
-              <div class="mb-2 form-check">
-                <input class="form-check-input" type="radio" name="pregunta1" id="radio2Example4" />
-                <label class="form-check-label" for="radio2Example4">Malo</label>
-              </div>
-              <div class="mb-2 form-check">
-                <input class="form-check-input" type="radio" name="pregunta1" id="radio2Example5" />
-                <label class="form-check-label" for="radio2Example5">Muy Malo</label>
-              </div>
-            </div>
-        </fieldset>
+             @foreach ($opciones as $opcion)
+              @if($opcion->PreguntaID == $pregunta->id)
+               <div class="mb-2 form-check">
+                  <input class="form-check-input" type="radio" name="pregunta1" id="radio2Example1" />
+                  <label class="form-check-label" for="radio2Example1">{{$opcion->OpcionTexto}}</label>
+               </div>
+              @endif
+             @endforeach
+              
+        </fieldset> 
+          @endforeach
+          
 
         <!--=========================================================================================-->
-          <fieldset>
+         <!-- <fieldset>
           <p class="text-center"><strong>¿Comó califica el trato recibido por parte del Personal?</strong></p>
 
           <div class="mb-2 form-check">
@@ -119,7 +123,7 @@
       </fieldset>
 <!--=========================================================================================-->
 
-      <fieldset>
+    <!--  <fieldset>
       <p class="text-center"><strong>Your rating:</strong></p>
       <div class="mb-2 form-check">
         <input class="form-check-input" type="radio" name="pregunta3" id="radio2Example1" />
@@ -154,7 +158,7 @@
     </fieldset>
 
 <!--=========================================================================================-->
-    <fieldset>
+    <!-- <fieldset>
     <p class="text-center"><strong>Your rating:</strong></p>
     <div class="mb-2 form-check">
       <input class="form-check-input" type="radio" name="pregunta4" id="radio2Example1" />
@@ -189,7 +193,7 @@
   </fieldset>
 <!--=========================================================================================-->
 
-  <fieldset>
+ <!--  <fieldset>
     <p class="text-center"><strong>Your rating:</strong></p>
     <div class="mb-2 form-check">
     <input class="form-check-input" type="radio" name="pregunta5" id="radio2Example1" />
@@ -224,7 +228,7 @@
 </fieldset>
 <!--=========================================================================================-->
 
-<fieldset>
+<!-- <fieldset>
 <p class="text-center"><strong>Your rating:</strong></p>
 <div class="mb-2 form-check">
   <input class="form-check-input" type="radio" name="pregunta6" id="radio2Example1" />
@@ -259,7 +263,7 @@
 </fieldset>
 <!--=========================================================================================-->
 
-<fieldset>
+<!-- <fieldset>
   <p class="text-center"><strong>Your rating:</strong></p>
 
 <div class="mb-2 form-check">
@@ -307,7 +311,7 @@
   <div class="mb-4 form-outline">
     <textarea class="form-control" id="form4Example3" rows="4"></textarea>
   </div>
-</fieldset>
+</fieldset>-->
 <div class="card-footer text-end">
   <button type="submit" class="btn btn-primary">Enviar</button>
 </div>
