@@ -24,7 +24,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-/*oute::get('/', function () {
+/*Route::get('/', function () {
     return view('form-encuesta.encuesta');
 });
 Route::get('/', function () {
@@ -44,21 +44,16 @@ Route::get('/',[EncuestaController::class,'index'])->name('preguntas.index');
             diligenciado por los usuarios*/
 Route::post('respuestas', [respuestasController::class, 'store'])
             ->name('respuestas.store');
-            
+   
+           /* Route::get('/', function () {
+                return view('form-encuesta.queja');*/
 /*Route::get('/', function () {
-Route::get('/', function () {
-    return view('form-encuesta.queja');
-    
-});
 
     return view('encuesta.inicioqueja');
-    
 });*/
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Auth::routes();
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Auth::routes();
