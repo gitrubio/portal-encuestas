@@ -35,6 +35,9 @@ Route::get('', function () {
 });*/
 
 
+
+
+
 Route::get('/', function () {
     return view('form-encuesta.preguntas');
 });
