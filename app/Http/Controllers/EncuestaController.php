@@ -13,7 +13,7 @@ class EncuestaController extends Controller
     
     //$preguntas =Pregunta::all();
     //$opciones =Opcion::all();
-    return view('form-encuesta.preguntas',compact('preguntas','opciones','count','count2'));
+    return view('form-encuesta.preguntas',compact('preguntas','opciones'));
     }
 }
 
