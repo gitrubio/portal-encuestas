@@ -73,13 +73,14 @@
         <form class="px-4" action="{{route('respuestas.store')}}" method="POST">
           
           @foreach ($preguntas as $pregunta)
+          
             <fieldset>           
           <p class="text-center"><strong>{{$pregunta->pregunta}}</strong></p>
            <div class="">
              @foreach ($opciones as $opcion)
               @if($opcion->PreguntaID == $pregunta->id)
                <div class="mb-2 form-check">
-                  <input class="form-check-input" type="radio" name="pregunta1" id="radio2Example1" />
+                  <input class="form-check-input" type="radio" name="pregunta{{$pregunta->id}}"} id="radio2Example{{$opcion->id}}" />
                   <label class="form-check-label" for="radio2Example1">{{$opcion->OpcionTexto}}</label>
                </div>
               @endif
