@@ -28,12 +28,10 @@
     <div class= "modal-dialog">
       <div class="modal-content">
         <img class="mx-auto my-4 rounded d-block" src="../resources/imagenes/Perfect-Body-Santa-Marta.png" alt="">
-<<<<<<< HEAD
         <div class =" textoInicio">
           <p class="text-justify1 justify-content-end ">
             <strong>PERFECT BODY MEDICAL CENTER</strong></br> prueba
             </br><strong>Por favor, Realizar la siguiente encuesta: </strong></p>
->>>>>>> 59977a062544dcf075951fe2a736a3c951530143
         </div>
         <div class="row1">
 
