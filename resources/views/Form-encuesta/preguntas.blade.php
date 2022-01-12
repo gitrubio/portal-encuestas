@@ -63,13 +63,15 @@
         </button>-->
       </div>
       <div class="modal-body">
-        <p class="text-justify justify-content-end">Estimado usuario </br>
+        <p class="text-center justify-content-end">Estimado usuario </br>
         Para <strong>PERFECT BODY MEDICAL CENTER</strong>, sus opiniones y sugerencias son de valiosa importancia para la mejora continua. Permitanos conocer su percepción para la toma de decisiones que nos permita prestarle cada vez, un mejor servicio.
         </br><strong>Por favor, marque la casilla según su percepción del servicio recibido:</strong></p>
 {{-- Inicia el formulario de preguntas el cual el usuario va a llenar --}}
         
         <form class="px-4" action="{{route('respuestas.store')}}" method="POST">
-          
+          @foreach ($PacientesActivos as $PA)
+          {{PA->identificacion}}
+          @endforeach
           @foreach ($preguntas as $pregunta)
           
             <fieldset>           
@@ -323,6 +325,7 @@
     </div>
   </div>
 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
 
       </div>
     <!--  <div class="modal-footer">
@@ -335,7 +338,7 @@
 
 </body>
 </html>
-<script src="{{asset('assets/js/core/jquery.min.js')}}"></script>
+  <script src="{{asset('assets/js/core/jquery.min.js')}}"></script>
   <script src="{{asset('assets/js/core/popper.min.js')}}"></script>
   <script src="{{asset('assets/js/core/bootstrap.min.js')}}"></script>
   <script src="{{asset('assets/js/plugins/perfect-scrollbar.jquery.min.js')}}"></script>
