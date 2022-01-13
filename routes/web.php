@@ -30,9 +30,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/', function () {
     return view('dashboard.dashboard');
 });
-Route::get('', function () {
-    return view('form-encuesta.principal');    
-});*/
+*/
 
 
 
@@ -40,6 +38,9 @@ Route::get('', function () {
 
 Route::get('/', function () {
     return view('form-encuesta.preguntas');
+});
+Route::get('/principal', function () {
+    return view('form-encuesta.principal');
 });
 
 Route::get('/',[EncuestaController::class,'index'])->name('preguntas.index');

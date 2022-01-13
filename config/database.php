@@ -81,12 +81,12 @@ return [
 
         'sios' => [
             'driver' => 'sqlsrv',
-            'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', '192.168.1.95'),
-            'port' => env('DB_PORT', '1433'),
-            'database' => env('DB_DATABASE', 'sios'),
-            'username' => env('DB_USERNAME', 'sa'),
-            'password' => env('DB_PASSWORD', 'sa12_xxxx'),
+            'url' => env('DATABASE_URL_SECOND'),
+            'host' => env('DB_HOST_SECOND', '192.168.1.95'),
+            'port' => env('DB_PORT_SECOND', '1433'),
+            'database' => env('DB_DATABASE_SECOND', 'sios'),
+            'username' => env('DB_USERNAME_SECOND', 'sa'),
+            'password' => env('DB_PASSWORD_SECOND', 'sa1_xxxx'),
             'charset' => 'utf8',
             'prefix' => '',
             'prefix_indexes' => true,

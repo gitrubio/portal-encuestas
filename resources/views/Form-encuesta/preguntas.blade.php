@@ -68,8 +68,8 @@
 {{-- Inicia el formulario de preguntas el cual el usuario va a llenar --}}
         
         <form class="px-4" action="{{route('respuestas.store')}}" method="POST">
-          @foreach ($PacientesActivos as $PA)
-          {{PA->identificacion}}
+          @foreach ($pacientesactivos as $PA)
+          <h1>{{$PA->Identificacion}}</h1>
           @endforeach
           @foreach ($preguntas as $pregunta)
           
