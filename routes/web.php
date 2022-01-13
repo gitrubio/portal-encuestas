@@ -52,7 +52,6 @@ Route::post('respuestas', [respuestasController::class, 'store'])
            /* Route::get('/', function () {
                 return view('form-encuesta.queja');*/
 /*Route::get('/', function () {
-
     return view('encuesta.inicioqueja');
 });*/
 
@@ -74,4 +73,3 @@ Route::group(['middleware' => 'auth'], function () {
 	 Route::get('table-list', function () {return view('pages.tables');})->name('table');
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'App\Http\Controllers\ProfileController@password']);
 });
-
