@@ -29,26 +29,26 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 });
 Route::get('/', function () {
     return view('dashboard.dashboard');
-});
+});*/
 Route::get('', function () {
     return view('form-encuesta.principal');    
-});*/
+});
 
 
 
 
-
+ /* 
 Route::get('/', function () {
     return view('form-encuesta.preguntas');
 });
 
 Route::get('/',[EncuestaController::class,'index'])->name('preguntas.index');
             /*Ruta utilizada para Recibir los datos del Formulario de encuesta 
-            diligenciado por los usuarios*/
+            diligenciado por los usuarios
 Route::post('respuestas', [respuestasController::class, 'store'])
             ->name('respuestas.store');
    
-           /* Route::get('/', function () {
+          Route::get('/', function () {
                 return view('form-encuesta.queja');*/
 /*Route::get('/', function () {
 
