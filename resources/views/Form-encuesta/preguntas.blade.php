@@ -62,21 +62,24 @@
         </button>-->
       </div>
       <div class="modal-body">
-        <p class="text-justify justify-content-end">Estimado usuario </br>
+        <p class="text-center justify-content-end">Estimado usuario </br>
         Para <strong>PERFECT BODY MEDICAL CENTER</strong>, sus opiniones y sugerencias son de valiosa importancia para la mejora continua. Permitanos conocer su percepción para la toma de decisiones que nos permita prestarle cada vez, un mejor servicio.
         </br><strong>Por favor, marque la casilla según su percepción del servicio recibido:</strong></p>
 {{-- Inicia el formulario de preguntas el cual el usuario va a llenar --}}
         
         <form class="px-4" action="{{route('respuestas.store')}}" method="POST">
-          
+          @foreach ($PacientesActivos as $PA)
+          {{PA->identificacion}}
+          @endforeach
           @foreach ($preguntas as $pregunta)
+          
             <fieldset>           
           <p class="text-center"><strong>{{$pregunta->pregunta}}</strong></p>
            <div class="">
              @foreach ($opciones as $opcion)
               @if($opcion->PreguntaID == $pregunta->id)
                <div class="mb-2 form-check">
-                  <input class="form-check-input" type="radio" name="pregunta1" id="radio2Example1" />
+                  <input class="form-check-input" type="radio" name="pregunta{{$pregunta->id}}"} id="radio2Example{{$opcion->id}}" />
                   <label class="form-check-label" for="radio2Example1">{{$opcion->OpcionTexto}}</label>
                </div>
               @endif
@@ -321,6 +324,7 @@
     </div>
   </div>
 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
 
       </div>
     <!--  <div class="modal-footer">
@@ -333,7 +337,7 @@
 
 </body>
 </html>
-<script src="{{asset('assets/js/core/jquery.min.js')}}"></script>
+  <script src="{{asset('assets/js/core/jquery.min.js')}}"></script>
   <script src="{{asset('assets/js/core/popper.min.js')}}"></script>
   <script src="{{asset('assets/js/core/bootstrap.min.js')}}"></script>
   <script src="{{asset('assets/js/plugins/perfect-scrollbar.jquery.min.js')}}"></script>

@@ -33,7 +33,12 @@ Route::get('/', function () {
 Route::get('', function () {
     return view('form-encuesta.principal');    
 });*/
-Route::get('', function () {
+
+
+
+
+
+Route::get('/', function () {
     return view('form-encuesta.preguntas');
 });
 
@@ -43,11 +48,9 @@ Route::get('/',[EncuestaController::class,'index'])->name('preguntas.index');
 Route::post('respuestas', [respuestasController::class, 'store'])
             ->name('respuestas.store');
    
-Route::get('/', function () {
-    return view('form-encuesta.queja');
-            });
+           /* Route::get('/', function () {
+                return view('form-encuesta.queja');*/
 /*Route::get('/', function () {
-
     return view('encuesta.inicioqueja');
 });*/
 
@@ -68,10 +71,4 @@ Route::group(['middleware' => 'auth'], function () {
 	 Route::get('icons', function () {return view('pages.icons');})->name('icons'); 
 	 Route::get('table-list', function () {return view('pages.tables');})->name('table');
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'App\Http\Controllers\ProfileController@password']);
-});
-
-//rutas para el apartado de quejas
-Route::group(['middleware' => 'auth'], function () {
-	Route::resource('queja', 'App\Http\Controllers\UserController', ['except' => ['show']]);
-	
 });
