@@ -12,14 +12,15 @@ class EncuestaController extends Controller
     public function index(){
    $preguntas = \DB::table('pregunta')->select('id','pregunta')->get();
     $opciones = \DB::table('opcion')->select('id','PreguntaID','OpcionTexto')->get();
-    $PacientesActivos = \DB::connection('sios')->table('Pacientes')->get();
+    $pacientesactivos = \DB::connection('sios')->table('Pacientes')->take(2)->get();
     //$preguntas =Pregunta::all();
     //$opciones =Opcion::all();
-    return view('form-encuesta.preguntas',compact('preguntas','opciones'));
+    return view('form-encuesta.preguntas',compact('preguntas','opciones','pacientesactivos'));
     }
     public function ConsultaPaciente($CC){
     //$PacientesActivos = \DB::connection('sios')->
     }
+
 }
 
 
