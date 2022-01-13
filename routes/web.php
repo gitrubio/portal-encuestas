@@ -33,9 +33,7 @@ Route::get('/', function () {
 Route::get('', function () {
     return view('form-encuesta.principal');    
 });*/
-
-
-Route::get('/', function (){
+Route::get('', function () {
     return view('form-encuesta.preguntas');
 });
 
@@ -72,3 +70,8 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'App\Http\Controllers\ProfileController@password']);
 });
 
+//rutas para el apartado de quejas
+Route::group(['middleware' => 'auth'], function () {
+	Route::resource('queja', 'App\Http\Controllers\UserController', ['except' => ['show']]);
+	
+});
