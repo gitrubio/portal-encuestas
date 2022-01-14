@@ -48,8 +48,9 @@ Route::get('/',[EncuestaController::class,'index'])->name('preguntas.index');
 Route::post('respuestas', [respuestasController::class, 'store'])
             ->name('respuestas.store');
    
-          Route::get('/', function () {
-                return view('form-encuesta.queja');*/
+        /*  Route::get('/', function () {
+                return view('form-encuesta.queja');
+          });*/
 /*Route::get('/', function () {
 
     return view('encuesta.inicioqueja');
