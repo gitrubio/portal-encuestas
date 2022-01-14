@@ -4,6 +4,8 @@ use Illuminate\Contracts\Cache\Store;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\respuestasController;
 use App\Http\Controllers\EncuestaController;
+use App\Models\Paciente;
+
 
 /*
 |--------------------------------------------------------------------------

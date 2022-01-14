@@ -5,6 +5,9 @@ use App\Pregunta;
 use App\Opcion;
 use Illuminate\Http\Request;
 use App\Http\Requests;
+use App\Models\Paciente;
+
+
 
 
 class EncuestaController extends Controller
