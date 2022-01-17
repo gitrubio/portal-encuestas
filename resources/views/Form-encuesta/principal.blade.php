@@ -5,44 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Encuesta perfect body medical center</title>
-    <link href=" {{ asset('css/app.css') }}" rel="stylesheet">
+    <link href=" {{ asset('css/app2.css') }}" rel="stylesheet">
     <script type="text/javascript" src=" {{asset('js/app.js') }}" ></script>
 </head>
-<body>
+<body >
     
         
     <div class="container-fluid h-100 bg-light text-dark">
        
       
-        <div class="row justify-content-center align-items-center h-100">
+        <div class="row justify-content-center align-items-center heigh bg-light">
           <div class="col col-sm-6 col-md-6 col-lg-4 col-xl-3">
            
-            <form action="" method="POST">
-
+            <form action="{{route('principal.index')}}" method="POST"><!--formulario de inicio de usuario y llamada al controlador PrincipalController::class -->
+              @csrf
               <div class="card" style="width: 20rem;">
                 <div class="text-content-center card-header ">
                   <img class="mx-auto my-4 rounded d-block" src="../resources/imagenes/Perfect-Body-Santa-Marta.png" alt="">
                 </div>
                 <div class="card-body">
                   <h3 class="text-bold card-title" style="width: 15rem;">Encuesta de percepción</h3>
+                 
                   <div class="form-group">
-                    <label for="">Tipo de identificación</label>
-                  <select class="form-control" aria-placeholder="seleccionar" required>
+                    <label for="">Tipo de identificación</label> <!--ripo de documento-->
+                  <select class="form-control" aria-placeholder="seleccionar" required name="Tipo">
                             <option value="">Seleccionar</option>
                             <option value="1">Registro Civil</option>
                             <option value="2">Tarjeta de Identidad</option>
                             <option value="3">Cedula de Ciudadania</option>
                             <option value="4">Pasaporte</option>
                             <option value="5">Cedula de Extranjeria</option>
-                            <option value="6">N° Único de id. Personal</option>
-                            <option value="7">Carnet Diplomatico</option>
-                            <option value="8">Per Especial Permanencia</option>
-                            <option value="9">Per Protección Temporal</option>
                           </select>
                 </div>
                 <div class="form-group">
-                    <label for="">Identificación</label>
-                  <input type="text" class="form-control" name="Identificacion" placeholder="Identificación" required/>
+                    <label for="">Identificación</label><!--Docuemento del usuario (activo) -->
+                  <input type="text" class="form-control" id="Identificacion" name="Identificacion" placeholder="Identificación" required/>
                 </div>
                 <div class="text-center form-group">
                   <div class="form-check-inline">
