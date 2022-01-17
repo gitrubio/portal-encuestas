@@ -31,16 +31,13 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 /*Route::get('/', function () {
     return view('form-encuesta.encuesta');
 });
-
+<<<<<<< HEAD
 Route::get('/dashboard', function () {
     return view('users.dashboard');
 });*/
 
 Route::get('/', function () {
     return view('dashboard.dashboard');
-});*/
-Route::get('/principal', function () {
-    return view('form-encuesta.principal');    
 });
 
 
@@ -55,11 +52,8 @@ Route::get('/principal', function () {
 });*/
 Route::get('/', function () { //ruta para vista principal.(ingreso del usuario)
     return view('form-encuesta.principal');
-
-Route::get('/', function () {
-    return view('form-encuesta.preguntas');
-
 });
+
 
 Route::get('/encuesta',[EncuestaController::class,'index'])->name('preguntas.index');//llamando controlador de preguntas
 //Route::get('/',[PrincipalController::class,'index'])->name('prin.index');//llamando controlador principal

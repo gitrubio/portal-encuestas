@@ -35,14 +35,6 @@
           @foreach ($pacientesactivos as $pa)
         </br><strong>Por favor, Realizar la siguiente encuesta:{{$pa->Nombre}}  </strong></p>
           @endforeach
-         
-
-        <div class =" textoInicio">
-          <p class="text-justify1 justify-content-end ">
-            <strong>PERFECT BODY MEDICAL CENTER</strong></br> prueba
-            </br><strong>Por favor, Realizar la siguiente encuesta: </strong></p>
-
-        </div>
         <div class="row1">
 
           <button type="button" class="btn1 btn-primary1" data-toggle="modal" data-target="#exampleModalLong">

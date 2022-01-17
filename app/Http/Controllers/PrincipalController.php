@@ -18,7 +18,7 @@ class PrincipalController extends Controller
             $preguntas = \DB::table('pregunta')->select('id','pregunta')->get();
             $opciones = \DB::table('opcion')->select('id','PreguntaID','OpcionTexto')->get();
    
-            return view('form-encuesta.preguntas',compact('ititpacientesactivos','opciones','preguntas'));
+            return view('form-encuesta.preguntas',compact('pacientesactivos','opciones','preguntas'));
           echo('entre en el if');
          }else{
            
