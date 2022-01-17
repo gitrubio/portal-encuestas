@@ -4,7 +4,12 @@ use Illuminate\Contracts\Cache\Store;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\respuestasController;
 use App\Http\Controllers\EncuestaController;
+
 use App\Http\Controllers\PrincipalController;
+
+use App\Models\Paciente;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -26,9 +31,19 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 /*Route::get('/', function () {
     return view('form-encuesta.encuesta');
 });
+
 Route::get('/dashboard', function () {
     return view('users.dashboard');
 });*/
+
+Route::get('/', function () {
+    return view('dashboard.dashboard');
+});*/
+Route::get('/principal', function () {
+    return view('form-encuesta.principal');    
+});
+
+
 
 
 
@@ -40,6 +55,10 @@ Route::get('/dashboard', function () {
 });*/
 Route::get('/', function () { //ruta para vista principal.(ingreso del usuario)
     return view('form-encuesta.principal');
+
+Route::get('/', function () {
+    return view('form-encuesta.preguntas');
+
 });
 
 Route::get('/encuesta',[EncuestaController::class,'index'])->name('preguntas.index');//llamando controlador de preguntas
@@ -53,9 +72,11 @@ Route::post('respuestas', [respuestasController::class, 'store'])
 Route::post('encuesta', [PrincipalController::class, 'index'])
 ->name('principal.index');
    
-           /* Route::get('/', function () {
-                return view('form-encuesta.queja');*/
+        /*  Route::get('/', function () {
+                return view('form-encuesta.queja');
+          });*/
 /*Route::get('/', function () {
+
     return view('encuesta.inicioqueja');
 });*/
 
@@ -77,3 +98,4 @@ Route::group(['middleware' => 'auth'], function () {
 	 Route::get('table-list', function () {return view('pages.tables');})->name('table');
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'App\Http\Controllers\ProfileController@password']);
 });
+
