@@ -21,16 +21,17 @@
 </head>
 <body>
     <!-- Button trigger modal -->
+    <div class="container px-8">
     <div class="row2">
 
     </div>
     <div class= "modal-dialog">
       <div class="modal-content">
         <img class="mx-auto my-4 rounded d-block" src="../resources/imagenes/Perfect-Body-Santa-Marta.png" alt="">
-        <div class ="textoInicio">
-        <p class="text-justify1 justify-content-end">
-          <strong>PERFECT BODY MEDICAL CENTER</strong></br> prueba
-          </br><strong>Por favor, Realizar la siguiente encuesta: </strong></p>
+        <div class =" textoInicio">
+          <p class="text-justify1 justify-content-end ">
+            <strong>PERFECT BODY MEDICAL CENTER</strong></br> prueba
+            </br><strong>Por favor, Realizar la siguiente encuesta: </strong></p>
         </div>
         <div class="row1">
 
@@ -38,10 +39,10 @@
 
           
           <button type="button" class="btn1 btn-primary1" data-toggle="modal" data-target="#exampleModalLong">
-              Iniciar encuesta 
+              Iniciar Encuesta 
            </button> 
       </div>
-       
+    </div>
         </div>
     </div>
     
@@ -68,8 +69,8 @@
 {{-- Inicia el formulario de preguntas el cual el usuario va a llenar --}}
         
         <form class="px-4" action="{{route('respuestas.store')}}" method="POST">
-          @foreach ($PacientesActivos as $PA)
-          {{PA->identificacion}}
+          @foreach ($pacientesactivos as $PA)
+          <h1>{{$PA->Identificacion}}</h1>
           @endforeach
           @foreach ($preguntas as $pregunta)
           

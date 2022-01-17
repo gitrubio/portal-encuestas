@@ -31,10 +31,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 });
 Route::get('/', function () {
     return view('dashboard.dashboard');
-});
-Route::get('', function () {
-    return view('form-encuesta.principal');    
 });*/
+Route::get('/principal', function () {
+    return view('form-encuesta.principal');    
+});
 
 
 
@@ -50,9 +50,11 @@ Route::get('/',[EncuestaController::class,'index'])->name('preguntas.index');
 Route::post('respuestas', [respuestasController::class, 'store'])
             ->name('respuestas.store');
    
-           /* Route::get('/', function () {
-                return view('form-encuesta.queja');*/
+        /*  Route::get('/', function () {
+                return view('form-encuesta.queja');
+          });*/
 /*Route::get('/', function () {
+
     return view('encuesta.inicioqueja');
 });*/
 
@@ -74,3 +76,4 @@ Route::group(['middleware' => 'auth'], function () {
 	 Route::get('table-list', function () {return view('pages.tables');})->name('table');
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'App\Http\Controllers\ProfileController@password']);
 });
+

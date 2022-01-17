@@ -14422,6 +14422,7 @@ button.bg-dark:focus {
 
 .text-justify1 {
   text-align: center !important;
+  padding: 1%;
 }
 
 .text-wrap {
