@@ -15,7 +15,7 @@ class PrincipalController extends Controller
     public function index(Request $request)
     {
         $pacientesactivos = \DB::connection('sios')->table('Pacientes')->where('Identificacion','=',$request->input('Identificacion'))->get();//guery para identificar si el paciente que realiza la encuesta esta activo 
-         if($pacientesactivos!="[]"){
+         if($pacientesactivos!="[]"){ 
             
             $preguntas = \DB::table('pregunta')->select('id','pregunta')->get();
             $opciones = \DB::table('opcion')->select('id','PreguntaID','OpcionTexto')->get();
