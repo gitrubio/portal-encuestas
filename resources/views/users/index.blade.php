@@ -487,8 +487,8 @@
 <div class="row align-items-center justify-content-xl-between">
 <div class="col-xl-6">
     <div class="copyright text-center text-xl-left text-muted">
-        © Copyright <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">Tecnologia Perfect Body. Todos los derechos Reservados.</a> &amp;
-        <a href="https://www.updivision.com" class="font-weight-bold ml-1" target="_blank">Updivision</a>
+        © Copyright <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">Tecnologia Perfect Body. Todos los derechos Reservados.</a> 
+        <div class="copyright text-center text-xl-left text-muted">Creado por Emenavid Aconcha y Carlos Viloria
     </div>
 <!--</div>
 <div class="col-xl-6">
