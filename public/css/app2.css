@@ -4668,32 +4668,11 @@ body {
   font-weight: 400;
   line-height: 1.6;
   text-align: left;
- /* background-color: gray;
- */
-  animation: fluido 10s ease-in-out infinite;
-  background: linear-gradient(to left,#003660,#e82a7a);
-  background-size: 300%;
-  
-  
-  
-  /*bac0kground-image: url('../imagenes/hexa.jpg');
- background-size: 100%;
-*/}
-.principal {
-  margin: 0;
-  font-family: "Nunito", sans-serif;
-  font-size: 0.9rem;
-  font-weight: 400;
-  line-height: 1.6;
-  text-align: left;
-  background-color: gray;
+ background-color:#f8f9fa;
  
 }
-@keyframes fluido {
-  0% { background-position: 0 50% }
-  50% { background-position: 100% 50% }
-  100% { background-position: 0 50% }
-}
+
+
 
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -14432,7 +14411,6 @@ button.bg-dark:focus {
 
 .text-justify1 {
   text-align: center !important;
-  padding: 1%;
 }
 
 .text-wrap {

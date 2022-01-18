@@ -1,8 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Pregunta;
-use App\Opcion;
+
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Models\Paciente;
@@ -13,12 +12,13 @@ use App\Models\Paciente;
 class EncuestaController extends Controller
 {
     public function index(){
-   $preguntas = \DB::table('pregunta')->select('id','pregunta')->get();
+    $preguntas = \DB::table('pregunta')->select('id','pregunta')->get();
     $opciones = \DB::table('opcion')->select('id','PreguntaID','OpcionTexto')->get();
-    $pacientesactivos = \DB::connection('sios')->table('Pacientes')->take(2)->get();
+   
     //$preguntas =Pregunta::all();
     //$opciones =Opcion::all();
-    return view('form-encuesta.preguntas',compact('preguntas','opciones','pacientesactivos'));
+    return view('form-encuesta.preguntas',compact('preguntas','opciones'));
+
     }
     public function ConsultaPaciente($CC){
     //$PacientesActivos = \DB::connection('sios')->

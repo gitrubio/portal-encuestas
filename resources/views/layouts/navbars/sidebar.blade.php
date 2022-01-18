@@ -80,35 +80,78 @@
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('home') }}">
-                        <i class="ni ni-tv-2 text-primary"></i> {{ __('Dashboard') }}
+                         <i class="fas fa-home" style="color: #161DF8;"></i>{{ __('Inicio') }}
+                        
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" href="#navbar-examples" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-examples">
-                        <i class="fab fa-laravel" style="color: #f4645f;"></i>
-                        <span class="nav-link-text" style="color: #f4645f;">{{ __('Laravel Examples') }}</span>
+                       <!-- <i class="fab fa-laravel" style="color: #f4645f;"></i>-->
+                        <i class="fas fa-users"style="color: #161DF8;"></i>
+                        <span class="nav-link-text" style="color: #f4645f;">{{ __('Usuario') }}</span>
                     </a>
 
                     <div class="collapse show" id="navbar-examples">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('profile.edit') }}">
-                                    {{ __('User profile') }}
+                                    {{ __('Perfil') }}
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('user.index') }}">
-                                    {{ __('User Management') }}
+                                    {{ __('Gestión de usuarios') }}
+                                </a>
+                            </li>
+                            <!--<li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="ni ni-circle-08 text-pink"></i> {{ __('Register') }}
+                                </a>
+                            </li>-->
+                        </ul>
+                    </div>
+                </li>
+                {{-- Hay que cambiar la ruta por la del archivo de quejas --}}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('home') }}">
+                        <i class="fas fa-question" style="color: #161DF8;"></i>{{ __('Preguntas') }}
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('home') }}">
+                        <i class="fas fa-wrench" style="color: #161DF8;"></i>{{ __('Quejas') }}
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('icons') }}">
+                        <i class="fas fa-poll" style="color: #161DF8;"></i></i> {{ __('Encuestas') }}
+                    </a>
+                </li>
+               <!-- <li class="nav-item">
+                    <a class="nav-link active" href="#navbar-examples" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-examples">
+                        <i class="fas fa-poll"style="color: #161DF8;"></i>
+                        <span class="nav-link-text" style="color: #f4645f;">{{ __('Encuestas') }}</span>
+                    </a>
+
+                    <div class="collapse show" id="navbar-examples">
+                        <ul class="nav nav-sm flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('profile.edit') }}">
+                                    {{ __('Listar') }}
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <i class="ni ni-circle-08 text-pink"></i> {{ __('Register') }}
+                                <a class="nav-link" href="{{ route('user.index') }}">
+                                    {{ __('Graficar') }}
                                 </a>
                             </li>
                         </ul>
                     </div>
-                </li>
+                </li>-->
+
+
+                
+            
 
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('icons') }}">
@@ -123,7 +166,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('table') }}">
                       <i class="ni ni-bullet-list-67 text-default"></i>
-                      <span class="nav-link-text">Tables</span>
+                      <span class="nav-link-text">Tablas</span>
                     </a>
                 </li>
                 
