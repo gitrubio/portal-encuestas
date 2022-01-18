@@ -5,6 +5,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\respuestasController;
 use App\Http\Controllers\EncuestaController;
 
+use App\Http\Controllers\PrincipalController;
+
+use App\Models\Paciente;
+
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,9 +22,7 @@ use App\Http\Controllers\EncuestaController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 Auth::routes();
 
@@ -27,26 +31,40 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 /*Route::get('/', function () {
     return view('form-encuesta.encuesta');
 });
+<<<<<<< HEAD
+Route::get('/dashboard', function () {
+    return view('users.dashboard');
+});*/
+
 Route::get('/', function () {
     return view('dashboard.dashboard');
+});
+
+
+
+
+
+
+
+
+/*Route::get('/pregunta', function () {
+    return view('form-encuesta.preguntas');//ruta para vista de la encuesta
 });*/
-Route::get('/principal', function () {
-    return view('form-encuesta.principal');    
+Route::get('/', function () { //ruta para vista principal.(ingreso del usuario)
+    return view('form-encuesta.principal');
 });
 
 
-
-
-
-Route::get('/', function () {
-    return view('form-encuesta.preguntas');
-});
-
-Route::get('/',[EncuestaController::class,'index'])->name('preguntas.index');
-            /*Ruta utilizada para Recibir los datos del Formulario de encuesta 
-            diligenciado por los usuarios*/
+Route::get('/encuesta',[EncuestaController::class,'index'])->name('preguntas.index');//llamando controlador de preguntas
+//Route::get('/',[PrincipalController::class,'index'])->name('prin.index');//llamando controlador principal
+         
 Route::post('respuestas', [respuestasController::class, 'store'])
-            ->name('respuestas.store');
+->name('respuestas.store');
+   /*Ruta utilizada para Recibir los datos del Formulario de encuesta 
+            diligenciado por los usuarios*/
+//Route::resource('principal',PrincipalController::class);
+Route::post('encuesta', [PrincipalController::class, 'index'])
+->name('principal.index');
    
         /*  Route::get('/', function () {
                 return view('form-encuesta.queja');

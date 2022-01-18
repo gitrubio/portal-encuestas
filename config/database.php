@@ -79,7 +79,7 @@ return [
             'sslmode' => 'prefer',
         ],
 
-        'sios' => [
+        'sios' => [   /*conexion a sios base de datos (revisar el .env)*/
             'driver' => 'sqlsrv',
             'url' => env('DATABASE_URL_SECOND'),
             'host' => env('DB_HOST_SECOND', '192.168.1.95'),
