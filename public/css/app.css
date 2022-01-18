@@ -5211,8 +5211,8 @@ pre code {
   margin: 0 auto;
   border-radius: 10px;
   position: relative;
-  padding-bottom: 10px; 
-  padding-top: 30px; 
+  padding-bottom: 20px; 
+  padding-top: 20px; 
 }
 .row2 {
   display: flex;
@@ -7083,7 +7083,7 @@ textarea.form-control {
   
   display: inline-block;
   margin: 0 auto;
-  margin-top: 15%;
+  margin-top: 5%;
   font-weight: 400;
   color: #212529;
   text-align: center;

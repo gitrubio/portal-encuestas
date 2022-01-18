@@ -4,6 +4,7 @@ use Illuminate\Contracts\Cache\Store;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\respuestasController;
 use App\Http\Controllers\EncuestaController;
+use App\Http\Controllers\AlertController;
 
 use App\Http\Controllers\PrincipalController;
 
@@ -36,9 +37,9 @@ Route::get('/dashboard', function () {
     return view('users.dashboard');
 });*/
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('dashboard.dashboard');
-});
+});*/
 
 
 
@@ -55,7 +56,7 @@ Route::get('/', function () { //ruta para vista principal.(ingreso del usuario)
 });
 
 
-Route::get('/encuesta',[EncuestaController::class,'index'])->name('preguntas.index');//llamando controlador de preguntas
+//Route::get('/encuesta',[EncuestaController::class,'index'])->name('preguntas.index');//llamando controlador de preguntas
 //Route::get('/',[PrincipalController::class,'index'])->name('prin.index');//llamando controlador principal
          
 Route::post('respuestas', [respuestasController::class, 'store'])
