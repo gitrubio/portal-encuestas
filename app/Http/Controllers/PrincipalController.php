@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Alert;
 
 class PrincipalController extends Controller
 {
@@ -14,14 +15,16 @@ class PrincipalController extends Controller
     public function index(Request $request)
     {
         $pacientesactivos = \DB::connection('sios')->table('Pacientes')->where('Identificacion','=',$request->input('Identificacion'))->get();//guery para identificar si el paciente que realiza la encuesta esta activo 
-         if(!is_null($pacientesactivos)){
+         if($pacientesactivos!="[]"){ 
+            
             $preguntas = \DB::table('pregunta')->select('id','pregunta')->get();
             $opciones = \DB::table('opcion')->select('id','PreguntaID','OpcionTexto')->get();
    
             return view('form-encuesta.preguntas',compact('pacientesactivos','opciones','preguntas'));
-          echo('entre en el if');
+         
          }else{
-           
+           alert()->warning('Error de Identificacion','Usted no se encuentra como paciente activo');
+           return view('form-encuesta.principal');
          };
         
         

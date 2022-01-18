@@ -33,7 +33,9 @@
         <p class="text-justify1 justify-content-end">
           <strong>PERFECT BODY MEDICAL CENTER</strong></br> 
           @foreach ($pacientesactivos as $pa)
-        </br><strong>Por favor, Realizar la siguiente encuesta:{{$pa->Nombre}}  </strong></p>
+        </br><strong>Bienvenido</strong>
+        </br><strong>{{$pa->Nombre}}</strong>
+        </br><strong>Por favor, Realizar la siguiente encuesta </strong></p>
           @endforeach
         <div class="row1">
 
