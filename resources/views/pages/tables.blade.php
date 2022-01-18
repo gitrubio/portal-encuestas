@@ -4,12 +4,7 @@
     @include('layouts.headers.cards')
 @extends('layouts.app', ['title' => __('Tables')])
 
-@section('content')
-    @include('users.partials.header', [
-        'title' => __('Hello') . ' '. auth()->user()->name,
-        'description' => __('This is your profile page. You can see the progress you\'ve made with your work and manage your projects or assigned tasks'),
-        'class' => 'col-lg-7'
-    ])   
+
 <!--
 =========================================================
 * Argon Dashboard - v1.2.0
@@ -43,6 +38,7 @@
   <link rel="stylesheet" href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
   <!-- Argon CSS -->
   <link rel="stylesheet" href="../assets/css/argon.css?v=1.2.0" type="text/css">
+   <link type="text/css" href="{{ asset('aseets/css/argon.css') }}" rel="stylesheet">
 </head>
 
 <body>
@@ -103,11 +99,11 @@
                   <span class="nav-link-text">Tables</span>
                 </a>
               </li>
-            <li class="nav-item mb-5 mr-4 ml-4 pl-1 bg-danger" style="position: absolute; bottom: 0;">
+            <!--<li class="nav-item mb-5 mr-4 ml-4 pl-1 bg-danger" style="position: absolute; bottom: 0;">
                 <a class="nav-link text-white" href="{{route('upgrade')}}">
                     <i class="ni ni-cloud-download-95"></i> Upgrade to PRO
                 </a>
-            </li>
+            </li>-->
         </ul>
           <!-- Divider -->
           <hr class="my-3">
