@@ -20,8 +20,7 @@
       <div class="modal-body">
         <div class="text-justify ">
           <i class="mb-3 far fa-file-alt fa-4x text-primary"></i>
-          <p>
-            Estimado usuario</br>
+          <p class="text-justify">Estimado usuario</br>
                 Para <strong class="color-blue-300">PERFECT BODY MEDICAL CENTER</strong>, sus opiniones y sugerencias son de valiosa
                 importancia para la mejora continua. Permitanos conocer su percepción para la 
                 toma de decisiones que nos permita prestarle cada vez, un mejor servicio.

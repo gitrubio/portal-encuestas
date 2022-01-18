@@ -6,15 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href=" {{ asset('css/app.css') }}" rel="stylesheet">
 
-
-
-
-
-
-
-
-
-    
+   
 
     <script type="text/javascript" src=" {{asset('js/app.js') }}" ></script>
     <title>Encuesta Perfect Body Medical Center</title>
