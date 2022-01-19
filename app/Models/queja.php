@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class queja extends Model
 {
     use HasFactory;
-        protected $Fillable = ['Descripcion', 'Link'];
+        protected $Fillable = ['id','Descripcion', 'Link'];
 }
