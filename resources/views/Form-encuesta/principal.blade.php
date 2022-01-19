@@ -7,8 +7,12 @@
     <title>Encuesta perfect body medical center</title>
     <link href=" {{ asset('css/app2.css') }}" rel="stylesheet">
     <script type="text/javascript" src=" {{asset('js/app.js') }}" ></script>
+
+    <script src="resourse/js/app.js"></script>
+
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.0.0/sweetalert.min.js"></script>
+
 </head>
 <body >
     
