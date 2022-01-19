@@ -34,7 +34,7 @@
           <strong>PERFECT BODY MEDICAL CENTER</strong></br> 
           @foreach ($pacientesactivos as $pa)
         </br><strong>Bienvenido</strong>
-        </br><strong>{{$pa->Nombre}}</strong>
+        </br><strong>{{$pa->Nom1Afil}}  {{$pa->Ape1Afil}}</strong>
         </br><strong>Por favor, Realizar la siguiente encuesta </strong></p>
           @endforeach
         <div class="row1">

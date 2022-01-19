@@ -14,18 +14,32 @@ class PrincipalController extends Controller
      */
     public function index(Request $request)
     {
-        $pacientesactivos = \DB::connection('sios')->table('Pacientes')->where('Identificacion','=',$request->input('Identificacion'))->get();//guery para identificar si el paciente que realiza la encuesta esta activo 
-         if($pacientesactivos!="[]"){ 
-            
-            $preguntas = \DB::table('pregunta')->select('id','pregunta')->get();
-            $opciones = \DB::table('opcion')->select('id','PreguntaID','OpcionTexto')->get();
+        $pacienteactivo = \DB::connection('sios')->table('Pacientes')->join('CasosActivos','CasosActivos.Paciente','=','Pacientes.Id')
+        ->where('Identificacion','=',$request->input('Identificacion'))->select('Pacientes.TipoID', 'Pacientes.Identificacion', 'Pacientes.Expedicion', 'Pacientes.Nom1Afil', 'Pacientes.Nom2Afil', 'Pacientes.Ape1Afil', 'Pacientes.Ape2Afil', 'Pacientes.Sexo', 'Pacientes.FechaNac', 'Pacientes.DirAfil', 'Pacientes.TelRes', 'Pacientes.Email')->get();//guery para identificar si el paciente que realiza la encuesta esta activo 
+          
+        if($pacienteactivo!="[]"){ 
+               
+               $verificacion = \DB::table('usuarios')->where('identificacion','=',$request->input('Identificacion'))->get(); 
+               
+               if($verificacion=="[]"){
+
+               }else{
+                   $datospaciente = $verificacion;
+               };
+
+               $preguntas = \DB::table('pregunta')->select('id','pregunta')->get();
+               $opciones = \DB::table('opcion')->select('id','PreguntaID','OpcionTexto')->get();
    
-            return view('form-encuesta.preguntas',compact('pacientesactivos','opciones','preguntas'));
+               return view('form-encuesta.preguntas',compact('datospaciente','opciones','preguntas'));
          
-         }else{
-           alert()->warning('Error de Identificacion','Usted no se encuentra como paciente activo');
-           return view('form-encuesta.principal');
-         };
+            }else{
+
+                  alert()->warning('Error de Identificacion','Usted no se encuentra como paciente activo');
+
+                  return view('form-encuesta.principal');
+                
+            
+            };
         
         
        
