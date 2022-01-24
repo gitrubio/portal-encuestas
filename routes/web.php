@@ -34,7 +34,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 /*Route::get('/', function () {
     return view('form-encuesta.encuesta');
 });
-<<<<<<< HEAD
 Route::get('/dashboard', function () {
     return view('users.dashboard');
 });*/
@@ -68,6 +67,8 @@ Route::post('respuestas', [respuestasController::class, 'store'])
 //Route::resource('principal',PrincipalController::class);
 Route::post('encuesta', [PrincipalController::class, 'index'])
 ->name('principal.index');
+
+Route::get('dashboard',[crear_preguntacontroller::class,'create'])->name('crear_pregunta');
    
         /*  Route::get('/', function () {
                 return view('form-encuesta.queja');
@@ -90,10 +91,11 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('profile', ['as' => 'profile.edit', 'uses' => 'App\Http\Controllers\ProfileController@edit']);
 	Route::put('profile', ['as' => 'profile.update', 'uses' => 'App\Http\Controllers\ProfileController@update']);
 	Route::get('upgrade', function () {return view('pages.upgrade');})->name('upgrade'); 
-	 Route::get('map', function () {return view('pages.maps');})->name('map');
-	 Route::get('crear_pregunta', function () {return view('dashboard.crear_pregunta');})->name('crear_pregunta');
-	 Route::get('icons', function () {return view('pages.icons');})->name('icons'); 
-	 Route::get('table-list', function () {return view('pages.tables');})->name('table');
+	Route::get('map', function () {return view('pages.maps');})->name('map');
+	Route::get('crear_pregunta',[crear_preguntacontroller::class,'index'])->name('index_pregunta');
+    Route::get('queja',[Quejascontroller::class,'index'])->name('queja');
+    Route::get('icons', function () {return view('pages.icons');})->name('icons'); 
+	Route::get('table-list', function () {return view('pages.tables');})->name('table');
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'App\Http\Controllers\ProfileController@password']);
 });
 
