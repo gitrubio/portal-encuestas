@@ -15,7 +15,7 @@ class CreateEncuestasRealizadasTable extends Migration
     {
         Schema::create('encuestas_realizadas', function (Blueprint $table) {
             $table->string('UsuarioID');
-            $table->foreign('UsuarioID')->references('identificacion')->on('usuarios');
+            $table->foreign('UsuarioID')->references('Identificacion')->on('usuarios');
             $table->string('EncuestaNombre');
             $table->foreign('EncuestaNombre')->references('NombreEncuesta')->on('encuesta');
             $table->dateTime('Fecha');
