@@ -21,7 +21,7 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <form method="post" action="{{ route('crear_preguntas.create') }}" autocomplete="off">
+                        <form method="post" action="{{ route('crear_pregunta.create') }}" autocomplete="off">
                             @csrf
                             <h6 class="heading-small text-muted mb-4">{{ __('Información') }}</h6>
                             

@@ -13,11 +13,10 @@ class CreatePreguntaTable extends Migration
      */
     public function up()
     {
-        Schema::create('pregunta', function (Blueprint $table) {
-            $table->unsignedBigInteger('id')->primary();
+        Schema::create('preguntas', function (Blueprint $table) {
+            $table->unsignedBigInteger('id')->autoIncrement()->uniqid();;
             $table->string('EncuestaNombre');
             $table->foreign('EncuestaNombre')->references('NombreEncuesta')->on('encuesta');
-            $table->string('TipoPregunta')->nullable(false);
             $table->string('Pregunta');
             $table->timestamps();
         });

@@ -24,9 +24,9 @@
         <div class ="textoInicio">
         <p class="text-justify1 justify-content-end">
           <strong>PERFECT BODY MEDICAL CENTER</strong></br> 
-          @foreach ($pacientesactivos as $pa)
+          @foreach ($pacienteactivo as $pa)
         </br><strong>Bienvenido</strong>
-        </br><strong>{{$pa->Nombre}}</strong>
+        </br><strong>{{$pa->Nom1Afil}}  {{$pa->Ape1Afil}}</strong>
         </br><strong>Por favor, Realizar la siguiente encuesta </strong></p>
           @endforeach
         <div class="row1">
@@ -59,256 +59,51 @@
         <p class="text-center justify-content-end">Estimado usuario </br>
         Para <strong>PERFECT BODY MEDICAL CENTER</strong>, sus opiniones y sugerencias son de valiosa importancia para la mejora continua. Permitanos conocer su percepción para la toma de decisiones que nos permita prestarle cada vez, un mejor servicio.
         </br><strong>Por favor, marque la casilla según su percepción del servicio recibido:</strong></p>
-{{-- Inicia el formulario de preguntas el cual el usuario va a llenar --}}
-        
+               {{-- Inicia el formulario de preguntas el cual el usuario va a llenar --}}
+        @php
+        $contador = 0;    
+        @endphp
         <form class="px-4" action="{{route('respuestas.store')}}" method="POST">
-          @foreach ($preguntas as $pregunta)
-          
-            <fieldset>           
-          <p class="text-center"><strong>{{$pregunta->pregunta}}</strong></p>
-           <div class="">
-             @foreach ($opciones as $opcion)
-              @if($opcion->PreguntaID == $pregunta->id)
-               <div class="mb-2 form-check">
-                  <input class="form-check-input" type="radio" name="pregunta{{$pregunta->id}}"} id="radio2Example{{$opcion->id}}" />
-                  <label class="form-check-label" for="radio2Example1">{{$opcion->OpcionTexto}}</label>
-               </div>
-              @endif
-             @endforeach
-              
-        </fieldset> 
+          @csrf
+         
+          @foreach ($pacienteactivo as $pa){{--Datos del usuario para enviar en el formulario--}}
+           @php
+            $nombre = $pa->Nom1Afil." ".$pa->Nom2Afil;
+            $apellido= $pa->Ape1Afil." ".$pa->Ape2Afil;
+           @endphp
+           <input class="hidden" type="hidden" name="TipoID" id="TipoID" value="{{$pa->TipoID}}">
+           <input class="hidden" type="hidden" name="Identificacion" id="Identificacion" value="{{$pa->TipoID}}">
+           <input class="hidden" type="hidden" name="Nombre" id="Nombre" value="{{$nombre}}">
+           <input class="hidden" type="hidden" name="Apellido" id="Apellido" value="{{$apellido}}">
+           <input class="hidden" type="hidden" name="Sexo" id="Sexo" value="{{$pa->Sexo}}">
+           <input class="hidden" type="hidden" name="FechaNac" id="FechaNac" value="{{$pa->FechaNac}}">
+           <input class="hidden" type="hidden" name="Direccion" id="Direccion" value="{{$pa->DirAfil}}">
+           <input class="hidden" type="hidden" name="Telefono" id="Telefono" value="{{$pa->TelRes}}">
+           <input class="hidden" type="hidden" name="Email" id="Email" value="{{$pa->Email}}">
           @endforeach
           
-
-        <!--=========================================================================================-->
-         <!-- <fieldset>
-          <p class="text-center"><strong>¿Comó califica el trato recibido por parte del Personal?</strong></p>
-
-          <div class="mb-2 form-check">
-            <input class="form-check-input" type="radio" name="pregunta2" id="radio2Example1" />
-            <label class="form-check-label" for="radio2Example1">
-              Very good
-            </label>
-          </div>
-          <div class="mb-2 form-check">
-            <input class="form-check-input" type="radio" name="pregunta2" id="radio2Example2" />
-            <label class="form-check-label" for="radio2Example2">
-              Good
-            </label>
-          </div>
-          <div class="mb-2 form-check">
-            <input class="form-check-input" type="radio" name="pregunta2" id="radio2Example3" />
-            <label class="form-check-label" for="radio2Example3">
-              Medicore
-            </label>
-        </div>
-        <div class="mb-2 form-check">
-          <input class="form-check-input" type="radio" name="pregunta2" id="radio2Example4" />
-          <label class="form-check-label" for="radio2Example4">
-            Bad
-          </label>
-        </div>
-        <div class="mb-2 form-check">
-          <input class="form-check-input" type="radio" name="pregunta2" id="radio2Example5" />
-          <label class="form-check-label" for="radio2Example5">
-            Very bad
-          </label>
-        </div>
-      </fieldset>
-<!--=========================================================================================-->
-
-    <!--  <fieldset>
-      <p class="text-center"><strong>Your rating:</strong></p>
-      <div class="mb-2 form-check">
-        <input class="form-check-input" type="radio" name="pregunta3" id="radio2Example1" />
-        <label class="form-check-label" for="radio2Example1">
-          Very good
-        </label>
-      </div>
-      <div class="mb-2 form-check">
-        <input class="form-check-input" type="radio" name="pregunta3" id="radio2Example2" />
-        <label class="form-check-label" for="radio2Example2">
-          Good
-        </label>
-      </div>
-      <div class="mb-2 form-check">
-        <input class="form-check-input" type="radio" name="pregunta3" id="radio2Example3" />
-        <label class="form-check-label" for="radio2Example3">
-          Medicore
-        </label>
-      </div>
-      <div class="mb-2 form-check">
-        <input class="form-check-input" type="radio" name="pregunta3" id="radio2Example4" />
-        <label class="form-check-label" for="radio2Example4">
-          Bad
-        </label>
-      </div>
-      <div class="mb-2 form-check">
-        <input class="form-check-input" type="radio" name="pregunta3" id="radio2Example5" />
-        <label class="form-check-label" for="radio2Example5">
-          Very bad
-        </label>
-      </div>
-    </fieldset>
-
-<!--=========================================================================================-->
-    <!-- <fieldset>
-    <p class="text-center"><strong>Your rating:</strong></p>
-    <div class="mb-2 form-check">
-      <input class="form-check-input" type="radio" name="pregunta4" id="radio2Example1" />
-      <label class="form-check-label" for="radio2Example1">
-        Very good
-      </label>
-    </div>
-    <div class="mb-2 form-check">
-      <input class="form-check-input" type="radio" name="pregunta4" id="radio2Example2" />
-      <label class="form-check-label" for="radio2Example2">
-        Good
-      </label>
-    </div>
-    <div class="mb-2 form-check">
-      <input class="form-check-input" type="radio" name="pregunta4" id="radio2Example3" />
-      <label class="form-check-label" for="radio2Example3">
-        Medicore
-      </label>
-    </div>
-    <div class="mb-2 form-check">
-      <input class="form-check-input" type="radio" name="pregunta4" id="radio2Example4" />
-      <label class="form-check-label" for="radio2Example4">
-        Bad
-      </label>
-    </div>
-    <div class="mb-2 form-check">
-      <input class="form-check-input" type="radio" name="pregunta4" id="radio2Example5" />
-      <label class="form-check-label" for="radio2Example5">
-        Very bad
-      </label>
-    </div>
-  </fieldset>
-<!--=========================================================================================-->
-
- <!--  <fieldset>
-    <p class="text-center"><strong>Your rating:</strong></p>
-    <div class="mb-2 form-check">
-    <input class="form-check-input" type="radio" name="pregunta5" id="radio2Example1" />
-    <label class="form-check-label" for="radio2Example1">
-      Very good
-    </label>
-  </div>
-  <div class="mb-2 form-check">
-    <input class="form-check-input" type="radio" name="pregunta5" id="radio2Example2" />
-    <label class="form-check-label" for="radio2Example2">
-      Good
-    </label>
-  </div>
-  <div class="mb-2 form-check">
-    <input class="form-check-input" type="radio" name="pregunta5" id="radio2Example3" />
-    <label class="form-check-label" for="radio2Example3">
-      Medicore
-    </label>
-  </div>
-  <div class="mb-2 form-check">
-    <input class="form-check-input" type="radio" name="pregunta5" id="radio2Example4" />
-    <label class="form-check-label" for="radio2Example4">
-      Bad
-    </label>
-  </div>
-  <div class="mb-2 form-check">
-    <input class="form-check-input" type="radio" name="pregunta5" id="radio2Example5" />
-    <label class="form-check-label" for="radio2Example5">
-      Very bad
-    </label>
-  </div>
-</fieldset>
-<!--=========================================================================================-->
-
-<!-- <fieldset>
-<p class="text-center"><strong>Your rating:</strong></p>
-<div class="mb-2 form-check">
-  <input class="form-check-input" type="radio" name="pregunta6" id="radio2Example1" />
-  <label class="form-check-label" for="radio2Example1">
-    Very good
-  </label>
-</div>
-<div class="mb-2 form-check">
-  <input class="form-check-input" type="radio" name="pregunta6" id="radio2Example2" />
-  <label class="form-check-label" for="radio2Example2">
-    Good
-  </label>
-</div>
-<div class="mb-2 form-check">
-  <input class="form-check-input" type="radio" name="pregunta6" id="radio2Example3" />
-  <label class="form-check-label" for="radio2Example3">
-    Medicore
-  </label>
-</div>
-<div class="mb-2 form-check">
-  <input class="form-check-input" type="radio" name="pregunta6" id="radio2Example4" />
-  <label class="form-check-label" for="radio2Example4">
-    Bad
-  </label>
-</div>
-<div class="mb-2 form-check">
-  <input class="form-check-input" type="radio" name="pregunta6" id="radio2Example5" />
-  <label class="form-check-label" for="radio2Example5">
-    Very bad
-  </label>
-</div>
-</fieldset>
-<!--=========================================================================================-->
-
-<!-- <fieldset>
-  <p class="text-center"><strong>Your rating:</strong></p>
-
-<div class="mb-2 form-check">
-  <input class="form-check-input" type="radio" name="pregunta7" id="radio2Example1" />
-  <label class="form-check-label" for="radio2Example1">
-    Very good
-  </label>
-</div>
-<div class="mb-2 form-check">
-  <input class="form-check-input" type="radio" name="pregunta7" id="radio2Example2" />
-  <label class="form-check-label" for="radio2Example2">
-    Good
-  </label>
-</div>
-<div class="mb-2 form-check">
-  <input class="form-check-input" type="radio" name="pregunta7" id="radio2Example3" />
-  <label class="form-check-label" for="radio2Example3">
-    Medicore
-  </label>
-</div>
-<div class="mb-2 form-check">
-  <input class="form-check-input" type="radio" name="pregunta7" id="radio2Example4" />
-  <label class="form-check-label" for="radio2Example4">
-    Bad
-  </label>
-</div>
-<div class="mb-2 form-check">
-  <input class="form-check-input" type="radio" name="pregunta7" id="radio2Example5" />
-  <label class="form-check-label" for="radio2Example5">
-    Very bad
-  </label>
-</div>
-</fieldset>
-<fieldset>
-  <p class="text-center"></i><strong>Your rating:</strong></p>
-
-<div class="mb-2 form-check">
-  <input class="form-check-input" type="radio" name="pregunta8" id="radio2Example1" />
-  <label class="form-check-label" for="radio2Example1">Si</label>
-</div>
-<div class="mb-2 form-check">
-  <input class="form-check-input" type="radio" name="pregunta8" id="radio2Example2" />
-  <label class="form-check-label" for="radio2Example2">No</label></br>
-  <label class="mb-2" for="">¿Por qué?</label></br>
-  <div class="mb-4 form-outline">
-    <textarea class="form-control" id="form4Example3" rows="4"></textarea>
-  </div>
-</fieldset>-->
-<div class="card-footer text-end">
-  <button type="submit" class="btn btn-primary">Enviar</button>
-</div>
+          @foreach ($preguntas as $pregunta){{--foreach de las preguntas y opciones de cada una--}}
+            @php
+              $contador++;
+            @endphp
+            <fieldset>           
+             <p class="text-center"><strong>{{$pregunta->pregunta}}</strong></p>
+              <div class="">
+              @foreach ($opciones as $opcion)
+                 @if($opcion->PreguntaID == $pregunta->id)
+                   <div class="mb-2 form-check">
+                     <input class="form-check-input" type="radio" name="pregunta{{$pregunta->id}}"} id="radio2Example{{$opcion->id}}" value="{{$opcion->id}}" />
+                     <label class="form-check-label" for="radio2Example1">{{$opcion->OpcionTexto}}</label>
+                   </div>
+                 @endif
+               @endforeach
+              
+            </fieldset> 
+          @endforeach{{--Fin de la seccion de preguntas--}}
+          <input class="hidden" type="hidden" name="contador" id="contador" value="{{$contador}}">{{--este contador sera usado para un ciclo en el controlador--}}
+            <div class="card-footer text-end">
+             <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
         </form>
       </div>
      
@@ -316,13 +111,10 @@
   </div>
 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
-
-      </div>
-    <!--  <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-success">Save changes</button>
-      </div>-->
-    </div>
+</div>
+    
+    </d
+    iv>
   </div>
 </div>  
 

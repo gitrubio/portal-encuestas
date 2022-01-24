@@ -13,11 +13,10 @@ class CreateOpcionTable extends Migration
      */
     public function up()
     {
-        Schema::create('opcion', function (Blueprint $table) {
-            $table->unsignedBigInteger('id');
+        Schema::create('opcions', function (Blueprint $table) {
+            $table->unsignedBigInteger('id')->autoIncrement()->uniqid();
             $table->unsignedBigInteger('PreguntaID');
-            $table->foreign('PreguntaID')->references('id')->on('pregunta');
-            $table->primary(['id','PreguntaID']);
+            $table->foreign('PreguntaID')->references('id')->on('preguntas');
             $table->string('OpcionTexto');
             $table->timestamps();
         });

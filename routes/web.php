@@ -100,5 +100,5 @@ Route::group(['middleware' => 'auth'], function () {
 });
 
 Route::group(['middleware' => 'auth'], function () {
-	Route::resource('crear_preguntas', 'App\Http\Controllers\crear_preguntaController', ['except' => ['show']]);
+	Route::resource('crear_pregunta', 'App\Http\Controllers\crear_preguntaController', ['except' => ['show']]);
 	});

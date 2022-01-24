@@ -312,19 +312,19 @@
                             <td>{{$pregunta->Tipopregunta}}</td>
                             <td>{{$pregunta->pregunta}}</td>
                             <td>
-                                <form action="" method="post">
-                                @csrf
-                                  <a href="" class="col-4 shortcut-item">
+                                <form action="{{route('crear_pregunta.destroy', $pregunta->id)}}" method="post">
+                                     <a href="{{route('crear_pregunta.edit', $pregunta->id)}}" class="col-4 shortcut-item">
                                       <span class="shortcut-media avatar rounded-circle bg-gradient-info">
                                           <i class="far fa-edit"></i>
                                       </span>
                                   </a>
+                                  @csrf
                                   @method('DELETE')
-                                  <a href="#!" class="col-4 shortcut-item">
+                                  <button type="submit" href="#!" class="col-4 shortcut-item" style="border:#0000">
                                       <span class="shortcut-media avatar rounded-circle bg-gradient-red">
                                         <i class="fas fa-trash-alt"></i>
-                                  </a>
-                                </form>
+                                      </button>
+                                 </form>
                             </td>
                         </tr> 
                       @endforeach
