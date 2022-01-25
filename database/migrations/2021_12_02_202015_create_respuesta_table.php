@@ -13,11 +13,11 @@ class CreateRespuestaTable extends Migration
      */
     public function up()
     {
-        Schema::create('respuesta', function (Blueprint $table) {
+        Schema::create('respuestas', function (Blueprint $table) {
             $table->unsignedBigInteger('P_ID');
-            $table->foreign('P_ID')->references('PreguntaID')->on('opcion');
+            $table->foreign('P_ID')->references('PreguntaID')->on('opcions');
             $table->unsignedBigInteger('O_ID');
-            $table->foreign('O_ID')->references('id')->on('opcion');
+            $table->foreign('O_ID')->references('id')->on('opcions');
             $table->string('U_ID');
             $table->foreign('U_ID')->references('UsuarioID')->on('encuestas_realizadas');
             $table->dateTime('FE');

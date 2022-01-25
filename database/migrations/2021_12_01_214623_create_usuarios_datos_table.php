@@ -14,14 +14,12 @@ class CreateUsuariosDatosTable extends Migration
     public function up()
     {
         Schema::create('usuarios_datos', function (Blueprint $table) {
-            $table->string('UsuarioIdentificacion');
-            $table->foreign('UsuarioIdentificacion')->references('identificacion')->on('usuarios');
+            $table->string('UsuarioIdentificacion')->primary();
+            $table->foreign('UsuarioIdentificacion')->references('Identificacion')->on('usuarios');
             $table->string('Nombre');
             $table->string('Apellido');
             $table->string('correo');
             $table->string('Telefono');
-            $table->string('Celular');
-            $table->string('EPservicios');
             $table->timestamps();
             
         });

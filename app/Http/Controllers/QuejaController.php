@@ -15,6 +15,8 @@ class QuejaController extends Controller
     public function index()
     {
         //
+        $quejas = queja::all();
+        return view('dashboard.index_queja', compact('quejas'));
     }
 
     /**
@@ -25,6 +27,7 @@ class QuejaController extends Controller
     public function create()
     {
         //
+        return view('Form-encuesta.inicioqueja');
     }
 
     /**
@@ -36,6 +39,14 @@ class QuejaController extends Controller
     public function store(Request $request)
     {
         //
+        $request->validate([
+            'id'=>'required',
+            'Descripcion'=>'required',
+            'TipoPregunta'=>'required',
+            'Pregunta'=>'required',
+        ]);
+        Pregunta::create($request->all());
+        return view('dashboard.index_pregunta');
     }
 
     /**

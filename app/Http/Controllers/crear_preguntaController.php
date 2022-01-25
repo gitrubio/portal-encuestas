@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Pregunta;
+use App\Models\Pregunta;
 use Illuminate\Http\Request;
 
 
@@ -15,8 +15,8 @@ class crear_preguntaController extends Controller
      */
     public function index()
     {
-        $preguntas = pregunta::all();
-        return view('preguntas.index_pregunta', compact('preguntas'));
+        $preguntas = Pregunta::all();
+        return view('dashboard.index_pregunta', compact('preguntas'));
     }
 
     /**
@@ -26,7 +26,7 @@ class crear_preguntaController extends Controller
      */
     public function create()
     {
-        return view('preguntas.crear_pregunta');
+        return view('dashboard.crear_pregunta');
         //
     }
 
@@ -46,7 +46,7 @@ class crear_preguntaController extends Controller
             'Pregunta'=>'required',
         ]);
         Pregunta::create($request->all());
-        return -> redirect()->route('preguntas.index_pregunta');
+        return view('dashboard.index_pregunta');
     }
 
     /**
@@ -66,10 +66,10 @@ class crear_preguntaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(pregunta $pregunta)
+    public function edit(Pregunta $pregunta)
     {
         //
-        return view('preguntas.editar_pregunta', compact('pregunta'));
+        return view('dashboard.editar_pregunta', compact('pregunta'));
     }
 
     /**
@@ -89,7 +89,7 @@ class crear_preguntaController extends Controller
             'Pregunta'=>'required',
         ]);
         Pregunta::update($request->all());
-        return -> redirect()->route('preguntas.index_pregunta');
+        return view('dashboard.index_pregunta');
     }
 
     /**
@@ -102,6 +102,6 @@ class crear_preguntaController extends Controller
     {
         //
         $pregunta->delete();
-        return -> redirect()->route('preguntas.index_pregunta');
+        return view('dashboard.index_pregunta');
     }
 }
