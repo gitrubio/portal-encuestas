@@ -20,7 +20,7 @@ class CreateRespuestaTable extends Migration
             $table->foreign('O_ID')->references('id')->on('opcions');
             $table->string('U_ID');
             $table->foreign('U_ID')->references('UsuarioID')->on('encuestas_realizadas');
-            $table->dateTime('FE');
+            $table->timestamp('FE');
             $table->foreign('FE')->references('Fecha')->on('encuestas_realizadas');
             $table->primary(['P_ID','O_ID','U_ID','FE']);
             $table->timestamps();

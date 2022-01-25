@@ -18,9 +18,8 @@ class CreateEncuestasRealizadasTable extends Migration
             $table->foreign('UsuarioID')->references('Identificacion')->on('usuarios');
             $table->string('EncuestaNombre');
             $table->foreign('EncuestaNombre')->references('NombreEncuesta')->on('encuesta');
-            $table->dateTime('Fecha');
+            $table->timestamp('Fecha');
             $table->primary(['Fecha','UsuarioID']);
-            $table->string('UnidadFuncional')->nullable(false);
             $table->timestamps();
 
         });

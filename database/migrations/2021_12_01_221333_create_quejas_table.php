@@ -18,9 +18,8 @@ class CreateQuejasTable extends Migration
             $table->string('UsuarioIdentificacion');
             $table->foreign('UsuarioIdentificacion')->references('identificacion')->on('usuarios');
             $table->primary(['id','UsuarioIdentificacion']);
-            $table->string('UnidadFuncional');
             $table->string('Descripcion');
-            $table->string('Link');
+            $table->string('Link')->nullable(true);
             $table->timestamps();
         });
     }
