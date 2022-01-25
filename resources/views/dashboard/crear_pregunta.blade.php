@@ -21,10 +21,8 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <form method="post" action="{{ route('profile.update') }}" autocomplete="off">
+                        <form method="post" action="{{ route('crear_pregunta.create') }}" autocomplete="off">
                             @csrf
-                            @method('put')
-
                             <h6 class="heading-small text-muted mb-4">{{ __('Información') }}</h6>
                             
                             @if (session('status'))
@@ -53,7 +51,7 @@
                                         <select class="form-control" aria-placeholder="seleccionar" required name="Tipo">
                                             <option value="">Seleccionar</option>
                                             <option value="1">Selección multiple</option>
-                                            <option value="2">Sio o No</option>
+                                            <option value="2">Si o No</option>
                                             
                                           </select>
                                 </div>
