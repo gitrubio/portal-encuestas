@@ -16,10 +16,10 @@ class CreateUsuariosDatosTable extends Migration
         Schema::create('usuarios_datos', function (Blueprint $table) {
             $table->string('UsuarioIdentificacion')->primary();
             $table->foreign('UsuarioIdentificacion')->references('Identificacion')->on('usuarios');
-            $table->string('Nombre');
-            $table->string('Apellido');
-            $table->string('correo');
-            $table->string('Telefono');
+            $table->string('Nombre')->nullable(true);
+            $table->string('Apellido')->nullable(true);
+            $table->string('correo')->nullable(true);
+            $table->string('Telefono')->nullable(true);
             $table->timestamps();
             
         });

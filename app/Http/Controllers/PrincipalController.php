@@ -19,12 +19,12 @@ class PrincipalController extends Controller
         ->where('Identificacion','=',$request->input('Identificacion'))->select('Pacientes.TipoID', 'Pacientes.Identificacion','Pacientes.Nom1Afil', 'Pacientes.Nom2Afil', 'Pacientes.Ape1Afil', 'Pacientes.Ape2Afil', 'Pacientes.Sexo', 'Pacientes.FechaNac', 'Pacientes.DirAfil', 'Pacientes.TelRes', 'Pacientes.Email')->get();//guery para identificar si el paciente que realiza la encuesta esta activo 
           
         if($pacienteactivo!="[]"){ 
-               echo($pacienteactivo);
+               
             
                $preguntas = \DB::table('preguntas')->select('id','pregunta')->get();
                $opciones = \DB::table('opcions')->select('id','PreguntaID','OpcionTexto')->get();
-   
-               return view('form-encuesta.preguntas',compact('pacienteactivo','opciones','preguntas'));
+               $name =  \DB::table('encuesta')->select('NombreEncuesta')->get();
+               return view('form-encuesta.preguntas',compact('pacienteactivo','opciones','preguntas','name'));
          
             }else{
                   $verificacion = \DB::connection('sios')->table('Pacientes')->where('Identificacion','=',$request->input('Identificacion'))->select('nombre')->get(); 
