@@ -30,10 +30,6 @@
                           <option value="3">Cedula de Ciudadania</option>
                           <option value="4">Pasaporte</option>
                           <option value="5">Cedula de Extranjeria</option>
-                          <option value="6">N° Único de id. Personal</option>
-                          <option value="7">Carnet Diplomatico</option>
-                          <option value="8">Per Especial Permanencia</option>
-                          <option value="9">Per Protección Temporal</option>
                         </select>
               </div>
               <div class="form-group">
