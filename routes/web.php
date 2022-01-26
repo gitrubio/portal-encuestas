@@ -92,14 +92,20 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::put('profile', ['as' => 'profile.update', 'uses' => 'App\Http\Controllers\ProfileController@update']);
 	Route::get('upgrade', function () {return view('pages.upgrade');})->name('upgrade'); 
 	Route::get('map', function () {return view('pages.maps');})->name('map');
-	Route::get('crear_pregunta',[crear_preguntacontroller::class,'index'])->name('index_pregunta');
+	
     Route::get('queja',[Quejascontroller::class,'index'])->name('queja');
+    Route::get('Graficos', function () {return view('Graficos.index');})->name('Graficos');
+
     Route::get('icons', function () {return view('pages.icons');})->name('icons'); 
 	Route::get('table-list', function () {return view('pages.tables');})->name('table');
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'App\Http\Controllers\ProfileController@password']);
 });
 
-/*Route::group(['middleware' => 'auth'], function () {
-	Route::resource('crear_pregunta', 'App\Http\Controllers\crear_preguntaController', ['except' => ['show']]);
-	});*/
+Route::group(['middleware' => 'auth'], function () {
+	/*Route::get('pregunta',[crear_preguntacontroller::class,'index'])->name('index_pregunta');*/
+    Route::resource('crear_pregunta', 'App\Http\Controllers\crear_preguntaController', ['except' => ['show']]);
+	});
 
+
+
+    

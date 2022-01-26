@@ -113,7 +113,7 @@
                 </li>
                 {{-- Hay que cambiar la ruta por la del archivo de quejas --}}
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('index_pregunta') }}">
+                    <a class="nav-link" href="{{ route('crear_pregunta.index') }}">
                         <i class="fas fa-question" style="color: #161DF8;"></i>{{ __('Preguntas') }}
                     </a>
                 </li>
@@ -123,7 +123,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('icons') }}">
+                    <a class="nav-link" href="{{ route('Graficos') }}">
                         <i class="fas fa-poll" style="color: #161DF8;"></i></i> {{ __('Encuestas') }}
                     </a>
                 </li>
