@@ -298,7 +298,6 @@
                       <thead class="thead-light">
                           <tr>
                               <th scope="col">ID</th>
-                              <th scope="col">Tipo</th>
                               <th scope="col">Preguntas</th>
                               <th scope="col">Acciones</th>
                               <th scope="col"></th>
@@ -309,7 +308,6 @@
                        @foreach($preguntas as $pregunta)
                          <tr>
                             <td>{{$pregunta->id}}</td>
-                            <td>{{$pregunta->Tipopregunta}}</td>
                             <td>{{$pregunta->pregunta}}</td>
                             <td>
                                 <form action="{{route('crear_pregunta.destroy', $pregunta->id)}}" method="post">

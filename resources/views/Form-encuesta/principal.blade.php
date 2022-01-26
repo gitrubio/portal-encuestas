@@ -14,7 +14,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.0.0/sweetalert.min.js"></script>
 
 </head>
-<body >
+<body background="../imagenes/fondo.gif">
     
         
     <div class="container-fluid h-100 bg-light text-dark">
