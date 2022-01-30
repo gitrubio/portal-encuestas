@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -57,7 +57,7 @@
       </div>
       <div class="modal-body">
         <p class="text-center justify-content-end">Estimado usuario </br>
-        Para <strong>PERFECT BODY MEDICAL CENTER</strong>, sus opiniones y sugerencias son de valiosa importancia para la mejora continua. Permitanos conocer su percepción para la toma de decisiones que nos permita prestarle cada vez, un mejor servicio.
+        Para <strong>PERFECT BODY MEDICAL CENTER</strong>, sus opiniones y sugerencias son de valiosa importancia para la mejora continua.  </br>Permitanos conocer su percepción para la toma de decisiones que nos permita prestarle cada vez, un mejor servicio.
         </br><strong>Por favor, marque la casilla según su percepción del servicio recibido:</strong></p>
                {{-- Inicia el formulario de preguntas el cual el usuario va a llenar --}}
         @php
@@ -72,7 +72,7 @@
             $apellido= $pa->Ape1Afil." ".$pa->Ape2Afil;
            @endphp
            <input class="hidden" type="hidden" name="TipoID" id="TipoID" value="{{$pa->TipoID}}">
-           <input class="hidden" type="hidden" name="Identificacion" id="Identificacion" value="{{$pa->TipoID}}">
+           <input class="hidden" type="hidden" name="Identificacion" id="Identificacion" value="{{$pa->Identificacion}}">
            <input class="hidden" type="hidden" name="Nombre" id="Nombre" value="{{$nombre}}">
            <input class="hidden" type="hidden" name="Apellido" id="Apellido" value="{{$apellido}}">
            <input class="hidden" type="hidden" name="Sexo" id="Sexo" value="{{$pa->Sexo}}">
@@ -81,7 +81,13 @@
            <input class="hidden" type="hidden" name="Telefono" id="Telefono" value="{{$pa->TelRes}}">
            <input class="hidden" type="hidden" name="Email" id="Email" value="{{$pa->Email}}">
           @endforeach
-          
+           @php
+           $Fecha = date('Y-m-d h:i:s', time());  
+           @endphp
+           <input type="hidden" name="Fecha" id="Fecha"  value="{{$Fecha}}">
+           @foreach ($name as $na)
+           <input type="hidden" name="EncuestaNombre" id="EncuestaNombre"  value="{{$na->NombreEncuesta}}">
+           @endforeach
           @foreach ($preguntas as $pregunta){{--foreach de las preguntas y opciones de cada una--}}
             @php
               $contador++;
@@ -92,7 +98,7 @@
               @foreach ($opciones as $opcion)
                  @if($opcion->PreguntaID == $pregunta->id)
                    <div class="mb-2 form-check">
-                     <input class="form-check-input" type="radio" name="pregunta{{$pregunta->id}}"} id="radio2Example{{$opcion->id}}" value="{{$opcion->id}}" />
+                     <input class="form-check-input" type="radio" name="{{$pregunta->id}}" id="radio2Example{{$opcion->id}}" value="{{$opcion->id}}" />
                      <label class="form-check-label" for="radio2Example1">{{$opcion->OpcionTexto}}</label>
                    </div>
                  @endif

@@ -15,7 +15,7 @@ class CreatePreguntaTable extends Migration
     {
         Schema::create('preguntas', function (Blueprint $table) {
             $table->unsignedBigInteger('id')->autoIncrement()->uniqid();;
-            $table->string('EncuestaNombre');
+            $table->string('EncuestaNombre')->nullable(true);
             $table->foreign('EncuestaNombre')->references('NombreEncuesta')->on('encuesta');
             $table->string('Pregunta');
             $table->timestamps();

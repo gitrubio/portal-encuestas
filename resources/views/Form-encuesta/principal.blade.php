@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,13 +14,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.0.0/sweetalert.min.js"></script>
 
 </head>
-<body >
+<body background="../imagenes/fondo.gif">
     
         
     <div class="container-fluid h-100 bg-light text-dark">
        
       
-        <div class="row justify-content-center align-items-center heigh bg-light">
+        <div class="row justify-content-center align-items-center heigh bg-info">
           <div class="col col-sm-6 col-md-6 col-lg-4 col-xl-3">
            
             <form action="{{route('principal.index')}}" method="POST"><!--formulario de inicio de usuario y llamada al controlador PrincipalController::class -->
