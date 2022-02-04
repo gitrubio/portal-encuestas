@@ -56,7 +56,7 @@
         </button>-->
       </div>
       <div class="modal-body">
-        <p class="text-center justify-content-end">Estimado usuario </br>
+        <p class="text-justify justify-content-end">Estimado usuario </br>
         Para <strong>PERFECT BODY MEDICAL CENTER</strong>, sus opiniones y sugerencias son de valiosa importancia para la mejora continua.  </br>Permitanos conocer su percepción para la toma de decisiones que nos permita prestarle cada vez, un mejor servicio.
         </br><strong>Por favor, marque la casilla según su percepción del servicio recibido:</strong></p>
                {{-- Inicia el formulario de preguntas el cual el usuario va a llenar --}}
