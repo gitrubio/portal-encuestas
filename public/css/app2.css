@@ -4630,7 +4630,7 @@ readers do not read off random characters that represent icons */
   --primary: #3490dc;
   --secondary: #6c757d;
   --success: #38c172;
-  --info: #6cb2eb;
+  --info: #3c688b;
   --warning: #ffed4a;
   --danger: #e3342f;
   --light: #f8f9fa;
@@ -4668,7 +4668,7 @@ body {
   font-weight: 400;
   line-height: 1.6;
   text-align: left;
- background-color:#f8f9fa;
+ background-color:#003660;
  
 }
 
@@ -5181,6 +5181,7 @@ pre code {
 .row {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 4%;
   margin-right: -15px;
   margin-left: -15px;
 }
@@ -7105,8 +7106,8 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #3490dc;
-  border-color: #3490dc;
+  background-color: #003660;
+  border-color: #003660;
 }
 .btn-primary:hover {
   color: #fff;
@@ -10843,7 +10844,7 @@ button.bg-success:focus {
 }
 
 .bg-info {
-  background-color: #6cb2eb !important;
+  background-color: #003660 !important;
 }
 
 a.bg-info:hover, a.bg-info:focus,

@@ -44,19 +44,7 @@ class respuestasController extends Controller
           'FE' => $request->input('Fecha'),
          ]);
       }
-      /*foreach ($opciones as $opcion) {
-        if($request->input($opcion->PreguntaID)==$opcion->id){
-         echo('pregunta id:'.$opcion->PreguntaID);
-         echo('respuesta id:'.$opcion->id);
-         \DB::table('respuestas')->insert([
-          'P_ID' => $request->input($opcion->PreguntaID),
-          'O_ID' => $request->input($opcion->id),
-          'U_ID' => $request->input('Identificacion'),
-          'FE' => $request->input('Fecha'),
-         ]);      
-        }
-     }*/
-      
+      alert()->success('Felicidades','Gracias Por Responder la Encuesta.');
     
        return view('form-encuesta.principal');
     }

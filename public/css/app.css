@@ -4670,7 +4670,7 @@ body {
   text-align: left;
  /* background-color: gray;
  */
-  animation: fluido 10s ease-in-out infinite;
+  animation: fluido 5s ease-in-out infinite;
   background: linear-gradient(to left,#003660,#e82a7a);
   background-size: 300%;
   
@@ -4691,7 +4691,7 @@ body {
 }
 @keyframes fluido {
   0% { background-position: 0 50% }
-  50% { background-position: 100% 50% }
+  50% { background-position: 100% 30% }
   100% { background-position: 0 50% }
 }
 
@@ -7126,13 +7126,13 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #3490dc;
-  border-color: #3490dc;
+  background-color: #003660;
+  border-color: #003660;
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #227dc7;
-  border-color: #2176bd;
+  background-color: #01243f;
+  border-color: #01243f;
 }
 .btn-primary:focus, .btn-primary.focus {
   color: #fff;
@@ -7156,14 +7156,14 @@ fieldset:disabled a.btn {
 .btn-primary1 {
   
   color: #fff;
-  background-color: #1E778F;
-  border-color: #1E778F;
+  background-color: #003660;
+  border-color:#003660;
 }
 .btn-primary1:hover {
   
   color: #fff;
-  background-color: #1f697e;
-  border-color: #1f697e;
+  background-color: #01243f;
+  border-color: #01243f;
 }
 .btn-primary1:focus, .btn-primary1.focus {
   color: #fff;
@@ -10864,7 +10864,7 @@ button.bg-success:focus {
 }
 
 .bg-info {
-  background-color: #6cb2eb !important;
+  background-color: #003660 !important;
 }
 
 a.bg-info:hover, a.bg-info:focus,
