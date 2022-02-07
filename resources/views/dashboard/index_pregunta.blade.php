@@ -1,3 +1,7 @@
+@extends('layouts.app')
+@section('content')
+{{-- php artisan serve --host=192.168.1.108 port=5500  esto se usa para lanzar seividor de prueba--}}
+
 <html lang="en"><head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -7,7 +11,7 @@
 
   <title>{{ config('app.name', 'Argon Dashboard') }}</title>
   <!-- Favicon -->
-  <link href="{{ asset('argon') }}/img/brand/favicon.png" rel="icon" type="image/png">
+  <!--<link href="{{ asset('argon') }}/img/brand/favicon.png" rel="icon" type="image/png">-->
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
   <!-- Icons -->

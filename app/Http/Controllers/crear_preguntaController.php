@@ -66,10 +66,10 @@ class crear_preguntaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Pregunta $pregunta)
+    public function edit(Pregunta $preguntas)
     {
         //
-        return view('dashboard.editar_pregunta', compact('pregunta'));
+        return view('dashboard.editar_pregunta', compact('preguntas'));
     }
 
     /**
@@ -79,7 +79,7 @@ class crear_preguntaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request,Pregunta $pregunta)
+    public function update(Request $request,Pregunta $preguntas)
     {
         //
         $request->validate([
