@@ -25,8 +25,10 @@
         <p class="text-justify1 justify-content-end">
           <strong>PERFECT BODY MEDICAL CENTER</strong></br> 
           @foreach ($pacienteactivo as $pa)
-        </br><strong>Bienvenido</strong>
-        </br><strong>{{$pa->Nom1Afil}}  {{$pa->Ape1Afil}}</strong>
+        </br><strong>Bienvenid@</strong>
+        <strong>{{$pa->Nom1Afil}}  {{$pa->Ape1Afil}}</strong>
+      </br><p>Para Perfect Body Medical Center es un gusto brindarle un servicio de calidad, es por eso que estamos 
+        agradecidos de que</p>
         </br><strong>Por favor, Realizar la siguiente encuesta </strong></p>
           @endforeach
           
@@ -57,7 +59,7 @@
         </button>-->
       </div>
       <div class="modal-body">
-        <p class="text-center justify-content-end">Estimado usuario </br>
+        <p class="text-justify justify-content-end">Estimado usuario </br>
         Para <strong>PERFECT BODY MEDICAL CENTER</strong>, sus opiniones y sugerencias son de valiosa importancia para la mejora continua.  </br>Permitanos conocer su percepción para la toma de decisiones que nos permita prestarle cada vez, un mejor servicio.
         </br><strong>Por favor, marque la casilla según su percepción del servicio recibido:</strong></p>
                {{-- Inicia el formulario de preguntas el cual el usuario va a llenar --}}
