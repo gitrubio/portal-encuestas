@@ -6,6 +6,8 @@ use App\Http\Controllers\respuestasController;
 use App\Http\Controllers\EncuestaController;
 use App\Http\Controllers\AlertController;
 use App\Http\Controllers\crear_preguntaController;
+use App\Http\Controllers\QuejaController;
+
 
 
 use App\Http\Controllers\PrincipalController;
@@ -93,7 +95,7 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('upgrade', function () {return view('pages.upgrade');})->name('upgrade'); 
 	Route::get('map', function () {return view('pages.maps');})->name('map');
 	
-    Route::get('queja',[Quejascontroller::class,'index'])->name('queja');
+    Route::get('queja',[Quejacontroller::class,'index'])->name('queja');
     Route::get('Graficos', function () {return view('Graficos.index');})->name('Graficos');
 
     Route::get('icons', function () {return view('pages.icons');})->name('icons'); 
