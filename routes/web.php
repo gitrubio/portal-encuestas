@@ -6,6 +6,9 @@ use App\Http\Controllers\respuestasController;
 use App\Http\Controllers\EncuestaController;
 use App\Http\Controllers\AlertController;
 use App\Http\Controllers\crear_preguntaController;
+use App\Http\Controllers\QuejaController;
+
+
 
 
 use App\Http\Controllers\PrincipalController;
@@ -68,9 +71,13 @@ Route::post('respuestas', [respuestasController::class, 'store'])
 Route::post('encuesta', [PrincipalController::class, 'index'])
 ->name('principal.index');
 
+/*Route::resource('queja', QuejaController::class);
+Route::post('queja', QuejaController::class);*/
+    
+
 Route::get('dashboard',[crear_preguntacontroller::class,'create'])->name('crear_pregunta');
    
-        /*  Route::get('/', function () {
+/*Route::get('/', function () {
                 return view('form-encuesta.queja');
           });*/
 /*Route::get('/', function () {
@@ -107,5 +114,5 @@ Route::group(['middleware' => 'auth'], function () {
 	});
 
 
-
+    Route:: get ('chart-js', [ChartJSController:: class , 'index']);
     

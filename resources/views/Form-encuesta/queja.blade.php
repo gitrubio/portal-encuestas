@@ -13,8 +13,10 @@
     
     <div class="container pt-4" style="background: linear-gradient(to bottom right, #dfe7fd,#a9d6e5);">
         <img class="mx-auto my-8 rounded d-block " src="../resources/imagenes/Perfect-Body-Santa-Marta.png" alt="">
-        <h2 class="text-center font-weight-bold pt-8">PROCESO DE RECOLECCIÓN DE QUEJA</h2>
-        <h5 class="">Su opinión es importante para nosotros; para realizar su queja tenga en cuenta los siguientes aspectos:</h4>
+        <div class="row">
+        <div class="col-sm-8 col-md-10 col-xl-12">
+            <h2 class="text-center font-weight-bold pt-8">PROCESO DE RECOLECCIÓN DE QUEJA</h2>
+            <h5 class="">Su opinión es importante para nosotros; para realizar su queja tenga en cuenta los siguientes aspectos:</h4>
             <div class="container">
                 <ol class="text-justify list-group text-content-justify">
                     <li class="ml-4">Dirijase en tono respetuoso</li>
@@ -23,19 +25,18 @@
                 </ol>
             </div>
         
-    <form action="" method="post">
-
-       
-        <div class="form-floating">
-           
-                <textarea class="form-control" name="queja" id="escqueja" cols="100" rows="10" placeholder="Redacte aqui su queja"></textarea>
-                       
+    <form action="{{--{{route('queja.store')}}--}}" method="post">
+        @csrf
+        
+        <div class="form-floating ">
+            <textarea class="form-control" name="queja" id="escqueja" cols="100" rows="10" placeholder="Redacte aqui su queja"></textarea>          
         </div>
-    
         <input class="hidden" type="file"></input><br>
         <button class="btn btn-primary text-center" type="submit" style="width: 8rem">Enviar</button>
+       
     </form>
 </div>
-   
+</div>
+</div>
 </body>
 </html>

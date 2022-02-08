@@ -28,10 +28,11 @@
         </br><strong>Bienvenid@</strong>
         <strong>{{$pa->Nom1Afil}}  {{$pa->Ape1Afil}}</strong>
       </br><p>Para Perfect Body Medical Center es un gusto brindarle un servicio de calidad, es por eso que estamos 
-        agradecidos de que</p>
+        agradecidos de que nos brinde su opinion</p>
         </br><strong>Por favor, Realizar la siguiente encuesta </strong></p>
           @endforeach
         <div class="row1">
+          
 
           <button type="button" class="btn1 btn-primary1" data-toggle="modal" data-target="#exampleModalLong">
               Iniciar Encuesta 
@@ -109,7 +110,11 @@
             </fieldset> 
           @endforeach{{--Fin de la seccion de preguntas--}}
           <input class="hidden" type="hidden" name="contador" id="contador" value="{{$contador}}">{{--este contador sera usado para un ciclo en el controlador--}}
-            <div class="card-footer text-end">
+          <div class="form-floating ">
+            <label for=""><strong>Sugerencias y Recomendaciones</strong></label>
+            <textarea class="form-control" name="queja" id="escqueja" cols="50" rows="5" placeholder="Redacte aqui su queja"></textarea>          
+        </div>  
+          <div class="card-footer text-end">
              <button type="submit" class="btn btn-primary">Enviar</button>
             </div>
         </form>

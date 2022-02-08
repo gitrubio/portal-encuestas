@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\queja;
 use Illuminate\Http\Request;
 
-class QuejaController extends Controller
+class ChartController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +14,6 @@ class QuejaController extends Controller
     public function index()
     {
         //
-        $quejas = queja::all();
-        return view('dashboard.index_queja', compact('quejas'));
     }
 
     /**
@@ -27,7 +24,6 @@ class QuejaController extends Controller
     public function create()
     {
         //
-        return view('Form-encuesta.inicioqueja');
     }
 
     /**
@@ -39,13 +35,6 @@ class QuejaController extends Controller
     public function store(Request $request)
     {
         //
-        $request->validate([
-            'id'=>'required',
-            'Descripcion'=>'required',
-            'link'=>'required',
-        ]);
-        queja::create($request->all());
-        return view('Form-encuesta.saludo');
     }
 
     /**
