@@ -31,12 +31,13 @@
         agradecidos de que nos brinde su opinion</p>
         </br><strong>Por favor, Realizar la siguiente encuesta </strong></p>
           @endforeach
+          
         <div class="row1">
           
 
           <button type="button" class="btn1 btn-primary1" data-toggle="modal" data-target="#exampleModalLong">
               Iniciar Encuesta 
-           </button> 
+          </button> 
       </div>
     </div>
         </div>

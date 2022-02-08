@@ -118,7 +118,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('home') }}">
+                    <a class="nav-link" href="{{ route('queja') }}">
                         <i class="fas fa-wrench" style="color: #161DF8;"></i>{{ __('Quejas') }}
                     </a>
                 </li>

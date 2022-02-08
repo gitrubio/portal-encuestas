@@ -312,7 +312,7 @@
                        @foreach($preguntas as $pregunta)
                          <tr>
                             <td>{{$pregunta->id}}</td>
-                            <td>{{$pregunta->pregunta}}</td>
+                            <td>{{$pregunta->Pregunta}}</td>
                             <td>
                                 <form action="{{route('crear_pregunta.destroy', $pregunta->id)}}" method="post">
                                      <a href="{{route('crear_pregunta.edit', $pregunta->id)}}" class="col-4 shortcut-item">

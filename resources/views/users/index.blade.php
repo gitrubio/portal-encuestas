@@ -446,9 +446,9 @@
                     <table class="table align-items-center table-flush">
                         <thead class="thead-light">
                             <tr>
-                                <th scope="col">Name</th>
+                                <th scope="col">Usuario</th>
                                 <th scope="col">Email</th>
-                                <th scope="col">Creation Date</th>
+                                <th scope="col">Fecha de creacion</th>
                                 <th scope="col">Acciones</th>
                                 <th scope="col"></th>
                             </tr>
@@ -487,8 +487,8 @@
 <div class="row align-items-center justify-content-xl-between">
 <div class="col-xl-6">
     <div class="copyright text-center text-xl-left text-muted">
-        © Copyright <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">Tecnologia Perfect Body. Todos los derechos Reservados.</a> &amp;
-        <a href="https://www.updivision.com" class="font-weight-bold ml-1" target="_blank">Updivision</a>
+        © Copyright <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">Tecnologia Perfect Body. Todos los derechos Reservados.</a> 
+        <div class="copyright text-center text-xl-left text-muted">Creado por Emenavid Aconcha y Carlos Viloria
     </div>
 <!--</div>
 <div class="col-xl-6">
