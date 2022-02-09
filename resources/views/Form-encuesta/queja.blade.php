@@ -14,7 +14,7 @@
     <div class="container pt-4" style="background: linear-gradient(to bottom right, #dfe7fd,#a9d6e5);">
         <img class="mx-auto my-8 rounded d-block " src="../resources/imagenes/Perfect-Body-Santa-Marta.png" alt="">
         <h2 class="text-center font-weight-bold pt-8">PROCESO DE RECOLECCIÓN DE QUEJA</h2>
-        <h5 class="">Su opinión es importante para nosotros; para realizar su queja tenga en cuenta los siguientes aspectos:</h4>
+        <h5 class="">Su opinión es importante para nosotros; para realizar su queja tenga en cuenta los siguientes aspectos:</h5>
             <div class="container">
                 <ol class="text-justify list-group text-content-justify">
                     <li class="ml-4">Dirijase en tono respetuoso</li>
@@ -22,14 +22,17 @@
                     <li class="ml-4">Aporte pruebas (si las tiene), cono fotos, documentos, o cualquier tipo de evidencia que usted considere que pueda respaldar lo descrito</li>
                 </ol>
             </div>
+        </br>
+        </br>
         
     <form action="" method="post">
-
-       
-        <div class="form-floating">
-           
-                <textarea class="form-control" name="queja" id="escqueja" cols="100" rows="10" placeholder="Redacte aqui su queja"></textarea>
-                       
+        <div class="form-floating pt-8">
+            <div class="pl-lg-4">
+            <div class="form-group">
+                <label class="form-control-label" for="input-name" uppercase><strong>{{ __('Titulo') }}</strong></label>
+                <input type="text" name="name" id="input-name" class="form-control form-control-alternative" placeholder="{{ __('Titulo de la queja') }}" value="" required autofocus>
+            <label class="form-control-label" for="input-name" uppercase><strong>{{ __('Descripción') }}</strong></label>
+            <textarea class="form-control" name="queja" id="escqueja" cols="100" rows="10" placeholder="Redacte aqui su queja"></textarea>               
         </div>
     
         <input class="hidden" type="file"></input><br>

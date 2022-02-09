@@ -72,9 +72,9 @@ Route::post('encuesta', [PrincipalController::class, 'index'])
 
 Route::get('dashboard',[crear_preguntacontroller::class,'create'])->name('crear_pregunta');
    
-        /*  Route::get('/', function () {
+         Route::get('/', function () {
                 return view('form-encuesta.queja');
-          });*/
+          });
 /*Route::get('/', function () {
 
     return view('encuesta.inicioqueja');
