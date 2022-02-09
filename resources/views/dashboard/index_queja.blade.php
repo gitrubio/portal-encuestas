@@ -299,7 +299,8 @@
                       <thead class="thead-light">
                           <tr>
                               <th scope="col">ID</th>
-                              <th scope="col">Queja</th>
+                              <th scope="col">Titulo</th>
+                              {{--<th scope="col">Queja</th>--}}
                               <th scope="col">ver</th>
                               <th scope="col">Responder</th>
                               <th scope="col">Eliminar</th>
@@ -311,7 +312,8 @@
                        @foreach($quejas as $queja)
                          <tr>
                             <td>{{$queja->id}}</td>
-                            <td>{{$queja->Descripcion}}</td>
+                            <td>{{$queja->Titulo}}</td>
+                            {{--<td>{{$queja->Descripcion}}</td>--}}
                             <td>
                                 
                                 <a href="{{--{{route('crear_pregunta.edit', $pregunta->id)}}--}}" class="col-1 shortcut-item">
