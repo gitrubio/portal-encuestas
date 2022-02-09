@@ -290,7 +290,7 @@
                       <div class="col-8">
                           <h3 class="mb-0">Preguntas Realizadas</h3>
                       </div>
-                      <div class="col-4 text-right">
+                      <div class="col-2 text-right">
                           <a href="{{route('crear_pregunta')}}" class="btn btn-sm btn-primary">Agregar pregunta</a>
                       </div>
                   </div>
@@ -357,8 +357,9 @@
                   </nav>
               </div>
           </div>
-          @include('layouts.footers.auth')
+          
       </div>
+      @include('layouts.footers.auth')
   </div>
       
  

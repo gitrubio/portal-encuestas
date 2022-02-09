@@ -299,7 +299,7 @@
                       <thead class="thead-light">
                           <tr>
                               <th scope="col">ID</th>
-                              <th scope="col">Queja</th>
+                              <th scope="col-4">Queja</th>
                               <th scope="col">ver</th>
                               <th scope="col">Responder</th>
                           </tr>
@@ -310,20 +310,20 @@
                          <tr>
                             <td>{{$queja->id}}</td>
                             <td>{{$queja->Descripcion}}</td>
-                            <td>{{--
-                                <form action="{{route('crear_pregunta.destroy', $pregunta->id)}}" method="post">
-                                     <a href="{{route('crear_pregunta.edit', $pregunta->id)}}" class="col-4 shortcut-item">
+                            <td>
+                                <form {{--action="{{route('crear_pregunta.destroy', $pregunta->id)}}" --}}method="post">
+                                     <a href="{{--{{route('crear_pregunta.edit', $pregunta->id)}}--}}" class="col-1 shortcut-item">
                                       <span class="shortcut-media avatar rounded-circle bg-gradient-info">
                                         <i class="fa fa-eye" aria-hidden="true"></i>
                                       </span>
                                   </a>
                                   @csrf
                                   @method('DELETE')
-                                  <button type="submit" href="#!" class="col-4 shortcut-item" style="border:#0000">
+                                  <button type="submit" href="#!" class="col-1 shortcut-item" style="border:#0000">
                                       <span class="shortcut-media avatar rounded-circle bg-gradient-red">
                                         <i class="fas fa-trash-alt"></i>
                                       </button>
-                                 </form>--}}
+                                 </form>
                             </td>
                         </tr> 
                       @endforeach
@@ -354,9 +354,8 @@
                   </nav>
               </div>
           </div>
-          @include('layouts.footers.auth')
       </div>
-      
+      @include('layouts.footers.auth')
   </div>
 
  
