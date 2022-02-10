@@ -39,12 +39,13 @@ class QuejaController extends Controller
     public function store(Request $request)
     {
         //
-        $request->validate([
-            'id'=>'required',
-            'Descripcion'=>'required',
-            'link'=>'required',
-        ]);
-        queja::create($request->all());
+        $queja = new queja();
+        $queja->id = $request->id;
+        $queja->Titulo = $request->Titulo;
+        $queja->Descripcion = $request->Descripcion;
+        $queja->link = $request->link;
+       
+        $queja -> save();
         return view('Form-encuesta.saludo');
     }
 

@@ -34,7 +34,7 @@
                  
                   <div class="form-group">
                     <label for="">Tipo de identificación</label> <!--ripo de documento-->
-                  <select class="form-control" aria-placeholder="seleccionar" required name="Tipo" id="Tipo">
+                    <select class="form-control" aria-placeholder="seleccionar" required name="Tipo" id="Tipo">
                             <option value="">Seleccionar</option>
                             <option value="1">Registro Civil</option>
                             <option value="2">Tarjeta de Identidad</option>
@@ -42,11 +42,10 @@
                             <option value="4">Pasaporte</option>
                             <option value="5">Cedula de Extranjeria</option>
                           </select>
-                </div>
+                  </div>
                 <div class="form-group">
                     <label for="">Identificación</label><!--Docuemento del usuario (activo) -->
-                  <input type="text" class="form-control" id="Identificacion" name="Identificacion" placeholder="Identificación" required/>
-                 
+                    <input type="text" class="form-control" id="Identificacion" name="Identificacion" placeholder="Identificación" required/>
                 </div>
                 <div class="text-center form-group">
                   <div class="form-check-inline">

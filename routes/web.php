@@ -8,10 +8,6 @@ use App\Http\Controllers\AlertController;
 use App\Http\Controllers\crear_preguntaController;
 use App\Http\Controllers\QuejaController;
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 0e55a7d21567b08913720693080774fe371ab435
 
 
 use App\Http\Controllers\PrincipalController;
