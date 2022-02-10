@@ -299,9 +299,12 @@
                       <thead class="thead-light">
                           <tr>
                               <th scope="col">ID</th>
-                              <th scope="col">Queja</th>
+                              <th scope="col">Titulo</th>
+                              {{--<th scope="col">Queja</th>--}}
                               <th scope="col">ver</th>
                               <th scope="col">Responder</th>
+                              <th scope="col">Eliminar</th>
+                              
                           </tr>
                       </thead>
                       <tbody>
@@ -309,21 +312,31 @@
                        @foreach($quejas as $queja)
                          <tr>
                             <td>{{$queja->id}}</td>
-                            <td>{{$queja->Descripcion}}</td>
-                            <td>{{--
-                                <form action="{{route('crear_pregunta.destroy', $pregunta->id)}}" method="post">
-                                     <a href="{{route('crear_pregunta.edit', $pregunta->id)}}" class="col-4 shortcut-item">
-                                      <span class="shortcut-media avatar rounded-circle bg-gradient-info">
+                            <td>{{$queja->Titulo}}</td>
+                            {{--<td>{{$queja->Descripcion}}</td>--}}
+                            <td>
+                                
+                                <a href="{{--{{route('crear_pregunta.edit', $pregunta->id)}}--}}" class="col-1 shortcut-item">
+                                    <span class="shortcut-media avatar rounded-circle bg-gradient-info">
                                         <i class="fa fa-eye" aria-hidden="true"></i>
-                                      </span>
-                                  </a>
-                                  @csrf
-                                  @method('DELETE')
-                                  <button type="submit" href="#!" class="col-4 shortcut-item" style="border:#0000">
-                                      <span class="shortcut-media avatar rounded-circle bg-gradient-red">
+                                    </span>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="{{--{{route('crear_pregunta.edit', $pregunta->id)}}--}}" class="col-1 shortcut-item">
+                                <span class="shortcut-media avatar rounded-circle bg-gradient-success">
+                                    <i class="fas fa-reply-all"></i>
+                                </span>
+                            </td>
+                            <td>
+                            <form {{--action="{{route('crear_pregunta.destroy', $pregunta->id)}}" --}}method="post">
+                                  {{--@csrf
+                                  @method('DELETE')--}}
+                                <button type="submit" href="#!" class="col-1 shortcut-item" style="border:#0000">
+                                    <span class="shortcut-media avatar rounded-circle bg-gradient-red">
                                         <i class="fas fa-trash-alt"></i>
-                                      </button>
-                                 </form>--}}
+                                </button>  
+                            </form>
                             </td>
                         </tr> 
                       @endforeach
@@ -354,7 +367,10 @@
                   </nav>
               </div>
           </div>
+<<<<<<< HEAD
          
+=======
+>>>>>>> 321121eba960c9861d51729e38f0c016b8967edd
       </div>
       @include('layouts.footers.auth')
   </div>

@@ -76,9 +76,13 @@ Route::post('queja', QuejaController::class);*/
 
 Route::get('dashboard',[crear_preguntacontroller::class,'create'])->name('crear_pregunta');
    
+<<<<<<< HEAD
 /*Route::get('/', function () {
+=======
+         Route::get('/', function () {
+>>>>>>> 321121eba960c9861d51729e38f0c016b8967edd
                 return view('form-encuesta.queja');
-          });*/
+          });
 /*Route::get('/', function () {
 
     return view('encuesta.inicioqueja');
