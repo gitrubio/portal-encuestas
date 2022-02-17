@@ -367,6 +367,10 @@
                   </nav>
               </div>
           </div>
+<<<<<<< HEAD
+         
+=======
+>>>>>>> 321121eba960c9861d51729e38f0c016b8967edd
       </div>
       @include('layouts.footers.auth')
   </div>
