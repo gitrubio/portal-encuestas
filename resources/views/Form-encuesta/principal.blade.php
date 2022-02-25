@@ -36,11 +36,12 @@
                     <label for="">Tipo de identificación</label> <!--ripo de documento-->
                     <select class="form-control" aria-placeholder="seleccionar" required name="Tipo" id="Tipo">
                             <option value="">Seleccionar</option>
-                            <option value="1">Registro Civil</option>
+                            <option value="1">Cedula de Ciudadania</option>
                             <option value="2">Tarjeta de Identidad</option>
-                            <option value="3">Cedula de Ciudadania</option>
+                            <option value="3">Registro Civil</option>
                             <option value="4">Pasaporte</option>
                             <option value="5">Cedula de Extranjeria</option>
+                            <option value="6">Permiso Especial</option>
                           </select>
                   </div>
                 <div class="form-group">

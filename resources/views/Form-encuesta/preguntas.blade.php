@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href=" {{ asset('css/app.css') }}" rel="stylesheet">
-    <link href=" {{ asset('css/appprogress.css') }}" rel="stylesheet">
+    {{--<link href=" {{ asset('css/appprogress.css') }}" rel="stylesheet">--}}
     <script type="text/javascript" src=" {{asset('js/app.js') }}" ></script>
     {{--<script type="text/javascript" src=" {{asset('js/appprogress.js') }}" ></script>
 
@@ -128,7 +128,7 @@
           <input class="hidden" type="hidden" name="contador" id="contador" value="{{$contador}}">{{--este contador sera usado para un ciclo en el controlador--}}
           <div class="form-floating ">
             <label for=""><strong>Sugerencias y Recomendaciones</strong></label>
-            <textarea class="form-control" name="queja" id="escqueja" cols="50" rows="5" placeholder="Redacte aqui su queja"></textarea>          
+            <textarea class="form-control" name="queja" id="queja" cols="50" rows="5" placeholder="Redacte aqui su queja"></textarea>          
         </div>  
           <div class="card-footer text-end">
              <button type="submit" class="btn btn-primary">Enviar</button>
