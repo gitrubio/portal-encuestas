@@ -22,14 +22,14 @@
         <img class="mx-auto my-4 rounded d-block" src="../resources/imagenes/Perfect-Body-Santa-Marta.png" alt="">
 
         <div class ="textoInicio">
-        <p class="text-justify1 justify-content-end">
-          <strong>PERFECT BODY MEDICAL CENTER</strong></br> 
+        <p class="text-justify justify-content-end">
+
           @foreach ($pacienteactivo as $pa)
         </br><strong>Bienvenid@</strong>
         <strong>{{$pa->Nom1Afil}}  {{$pa->Ape1Afil}}</strong>
       </br><p>Para Perfect Body Medical Center es un gusto brindarle un servicio de calidad, es por eso que estamos 
-        agradecidos de que nos brinde su opinion</p>
-        </br><strong>Por favor, Realizar la siguiente encuesta </strong></p>
+        agradecidos de que nos brinde su opinion en los servicios brindados por el personal</p>
+        <strong>Por favor, Diligenciar la siguiente encuesta </strong></p>
           @endforeach
           
         <div class="row1">
@@ -127,8 +127,7 @@
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
 </div>
     
-    </d
-    iv>
+    </div>
   </div>
 </div>  
 

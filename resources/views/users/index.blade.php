@@ -434,7 +434,7 @@
                             <h3 class="mb-0">Users</h3>
                         </div>
                         <div class="col-4 text-right">
-                            <a href="" class="btn btn-sm btn-primary">Add user</a>
+                            <a href="{{ route('register') }}" class="btn btn-sm btn-primary">Agregar usuario</a>
                         </div>
                     </div>
                 </div>
@@ -446,6 +446,8 @@
                     <table class="table align-items-center table-flush">
                         <thead class="thead-light">
                             <tr>
+                                <th scope="col">id</th>
+                                <th scope="col">Nombre y Apellidos</th>
                                 <th scope="col">Usuario</th>
                                 <th scope="col">Email</th>
                                 <th scope="col">Fecha de creacion</th>
@@ -455,7 +457,14 @@
                         </thead>
                         <tbody>
                                     <tr>
-                                    <td>Admin Admin</td>
+                                        @foreach ($users as $user)
+                                          <td>{{$user->id}}</td>  
+                                          <td>{{$user->name}} {{$user->lastname}}</td>  
+                                          <td>{{$user->username}}</td>  
+                                          <td>{{$user->email}}</td>  
+                                            
+                                        @endforeach
+                                   {{-- <td>Admin Admin</td>
                                     <td>
                                         <a href="mailto:admin@argon.com">admin@argon.com</a>
                                     </td>
@@ -469,7 +478,7 @@
                                             <a class="dropdown-item" href="">Edit</a>
                                             </div>
                                         </div>
-                                    </td>
+                                    </td>--}}
                                 </tr>
                         </tbody>
                     </table>

@@ -70,20 +70,20 @@ Route::post('respuestas', [respuestasController::class, 'store'])
 Route::post('encuesta', [PrincipalController::class, 'index'])
 ->name('principal.index');
 
+Route::post('queja', [PrincipalController::class, 'store'])
+->name('queja.store');
+
 /*Route::resource('queja', QuejaController::class);
 Route::post('queja', QuejaController::class);*/
     
 
 Route::get('dashboard',[crear_preguntacontroller::class,'create'])->name('crear_pregunta');
    
-<<<<<<< HEAD
-/*Route::get('/', function () {
-=======
+
          Route::get('/', function () {
->>>>>>> 321121eba960c9861d51729e38f0c016b8967edd
                 return view('form-encuesta.queja');
-          });
-/*Route::get('/', function () {
+          });/*
+Route::get('/', function () {
 
     return view('encuesta.inicioqueja');
 });*/
@@ -117,5 +117,4 @@ Route::group(['middleware' => 'auth'], function () {
 	});
 
 
-    Route:: get ('chart-js', [ChartJSController:: class , 'index']);
-    
+/*Route:: get ('chart-js', [ChartJSController:: class , 'index']);*/
