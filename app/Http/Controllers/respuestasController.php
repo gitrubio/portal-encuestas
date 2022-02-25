@@ -24,6 +24,10 @@ class respuestasController extends Controller
         'UsuarioIdentificacion' => $request->input('Identificacion'),
         'Nombre' => $request->input('Nombre'),
         'Apellido' => $request->input('Apellido'),
+    /*
+        'Sexo' => $request->input('Sexo')
+        'Fechanac' => $request->input('Fechanac')
+        */
         'correo' => $request->input('Email'),
         'Telefono' => $request->input('Telefono'),
       ]);
@@ -47,6 +51,6 @@ class respuestasController extends Controller
       }
       alert()->success('Felicidades','Gracias Por Responder la Encuesta.');
     
-       return view('form-encuesta.principal');
+       return view('form-encuesta.saludo');
     }
 }

@@ -14,13 +14,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.0.0/sweetalert.min.js"></script>
 
 </head>
-<body background="../imagenes/fondo.gif">
+<body background="{{ asset('argon') }}/img/brand/Fondo_perfect.jpg">
     
         
-    <div class="container-fluid h-100 bg-light text-dark">
+    <div class="container-fluid h-100 text-dark">
        
       
-        <div class="row justify-content-center align-items-center heigh bg-info">
+        <div class="row justify-content-center align-items-center heigh ">
           <div class="col col-sm-6 col-md-6 col-lg-4 col-xl-3">
            
             <form action="{{route('principal.index')}}" method="POST"><!--formulario de inicio de usuario y llamada al controlador PrincipalController::class -->

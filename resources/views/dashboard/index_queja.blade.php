@@ -288,7 +288,7 @@
               <div class="card-header border-0">
                   <div class="row align-items-center">
                       <div class="col-8">
-                          <h3 class="mb-0">Preguntas Realizadas</h3>
+                          <h3 class="mb-0">Quejas realizadas</h3>
                       </div>
                   </div>
               </div>
@@ -301,6 +301,7 @@
                               <th scope="col">ID</th>
                               <th scope="col">Titulo</th>
                               {{--<th scope="col">Queja</th>--}}
+                              <th scope="col">Estado</th>
                               <th scope="col">ver</th>
                               <th scope="col">Responder</th>
                               <th scope="col">Eliminar</th>
@@ -314,6 +315,7 @@
                             <td>{{$queja->id}}</td>
                             <td>{{$queja->Titulo}}</td>
                             {{--<td>{{$queja->Descripcion}}</td>--}}
+                            <td></td>
                             <td>
                                 
                                 <a href="{{--{{route('crear_pregunta.edit', $pregunta->id)}}--}}" class="col-1 shortcut-item">
@@ -367,10 +369,6 @@
                   </nav>
               </div>
           </div>
-<<<<<<< HEAD
-         
-=======
->>>>>>> 321121eba960c9861d51729e38f0c016b8967edd
       </div>
       @include('layouts.footers.auth')
   </div>
